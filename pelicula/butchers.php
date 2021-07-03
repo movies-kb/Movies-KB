@@ -54,7 +54,7 @@
 
 <div class="loading1" id="loading1" >
     <div class="logo">
-      <img src="img/kb.png" class="img-responsive" alt="Filmoves">
+      <img src="img/kb.png" class="img-responsive" alt="Movies-KB">
     </div> 
 
     <br>
@@ -93,7 +93,7 @@
 
         <ul class="hd-menu">
     <div class="hd-logo">
-        <a href="/" title="Movies KB"><img src="img/kb.png" alt="Movies - KB"></a>
+        <a href="/" title="Movies KB"><img src="img/kb.png" alt="Movies-KB"></a>
         </div>
 
             <li class="li-active"><a title="Ir al Inicio" href="../bienvenida.php"> Inicio</a></li>
