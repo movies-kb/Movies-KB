@@ -1,0 +1,8487 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css";
+
+a {
+    color: #ffffff;
+    transition: all .5s ease;
+    
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+.lazyload{
+    border-radius: 15px;
+}
+
+.slick-slider {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent
+}
+
+.slick-list,
+.slick-slider {
+    position: relative;
+    display: block
+}
+
+.slick-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0
+}
+
+.slick-list:focus {
+    outline: none
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand
+}
+
+.slick-slider .slick-list,
+.slick-slider .slick-track {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+}
+
+.slick-track:after,
+.slick-track:before {
+    display: table;
+    content: ""
+}
+
+.slick-track:after {
+    clear: both
+}
+
+.slick-loading .slick-track {
+    visibility: hidden
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px
+}
+
+[dir=rtl] .slick-slide {
+    float: right
+}
+
+.slick-slide img {
+    display: block
+}
+
+.slick-slide.slick-loading img {
+    display: none
+}
+
+.slick-slide.dragging img {
+    pointer-events: none
+}
+
+.slick-initialized .slick-slide {
+    display: block
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent
+}
+
+.slick-arrow.slick-hidden {
+    display: none
+}
+
+.slick-loading .slick-list {
+    background: #fff url(/assets/build/c5cd7f5300576ab4c88202b42f6ded62.gif) 50% no-repeat
+}
+
+@font-face {
+    font-family: slick;
+    font-weight: 400;
+    font-style: normal;
+    src: url(/assets/build/ced611daf7709cc778da928fec876475.eot);
+    src: url(/assets/build/ced611daf7709cc778da928fec876475.eot?#iefix) format("embedded-opentype"), url(/assets/build/b7c9e1e479de3b53f1e4e30ebac2403a.woff) format("woff"), url(/assets/build/d41f55a78e6f49a5512878df1737e58a.ttf) format("truetype"), url(/assets/build/f97e3bbf73254b0112091d0192f17aec.svg#slick) format("svg")
+}
+
+.slick-next,
+.slick-prev {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none
+}
+
+.slick-next,
+.slick-next:focus,
+.slick-next:hover,
+.slick-prev,
+.slick-prev:focus,
+.slick-prev:hover {
+    color: transparent;
+    outline: none;
+    background: transparent
+}
+
+.slick-next:focus:before,
+.slick-next:hover:before,
+.slick-prev:focus:before,
+.slick-prev:hover:before {
+    opacity: 1
+}
+
+.slick-next.slick-disabled:before,
+.slick-prev.slick-disabled:before {
+    opacity: .25
+}
+
+.slick-next:before,
+.slick-prev:before {
+    font-family: slick;
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.slick-prev {
+    left: -25px
+}
+
+[dir=rtl] .slick-prev {
+    right: -25px;
+    left: auto
+}
+
+.slick-prev:before {
+    content: "\2190"
+}
+
+[dir=rtl] .slick-prev:before {
+    content: "\2192"
+}
+
+.slick-next {
+    right: -25px
+}
+
+[dir=rtl] .slick-next {
+    right: auto;
+    left: -25px
+}
+
+.slick-next:before {
+    content: "\2192"
+}
+
+[dir=rtl] .slick-next:before {
+    content: "\2190"
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0
+}
+
+.slick-dots li,
+.slick-dots li button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    padding: 5px;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent
+}
+
+.slick-dots li button:focus,
+.slick-dots li button:hover {
+    outline: none
+}
+
+.slick-dots li button:focus:before,
+.slick-dots li button:hover:before {
+    opacity: 1
+}
+
+.slick-dots li button:before {
+    font-family: slick;
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: "\2022";
+    text-align: center;
+    opacity: .25;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #000
+}
+
+@charset "UTF-8";
+/*!
+  Ionicons, v2.0.1
+  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
+  https://twitter.com/benjsperry  https://twitter.com/ionicframework
+  MIT License: https://github.com/driftyco/ionicons
+
+  Android-style icons originally built by GoogleÃ¢â‚¬â„¢s
+  Material Design Icons: https://github.com/google/material-design-icons
+  used under CC BY http://creativecommons.org/licenses/by/4.0/
+  Modified icons to fit ioniconÃ¢â‚¬â„¢s grid from original.
+*/
+
+@font-face {
+    font-family: Ionicons;
+    src: url(/assets/build/19e65b89cee273a249fba4c09b951b74.eot);
+    src: url(/assets/build/19e65b89cee273a249fba4c09b951b74.eot#iefix) format("embedded-opentype"), url(/assets/build/dd4781d1acc57ba4c4808d1b44301201.ttf) format("truetype"), url(/assets/build/2c159d0d05473040b53ec79df8797d32.woff) format("woff"), url(/assets/build/28df6ee7b407fd8a14b40bc01f4fd3ae.svg#Ionicons) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+.ion,
+.ion-alert-circled:before,
+.ion-alert:before,
+.ion-android-add-circle:before,
+.ion-android-add:before,
+.ion-android-alarm-clock:before,
+.ion-android-alert:before,
+.ion-android-apps:before,
+.ion-android-archive:before,
+.ion-android-arrow-back:before,
+.ion-android-arrow-down:before,
+.ion-android-arrow-dropdown-circle:before,
+.ion-android-arrow-dropdown:before,
+.ion-android-arrow-dropleft-circle:before,
+.ion-android-arrow-dropleft:before,
+.ion-android-arrow-dropright-circle:before,
+.ion-android-arrow-dropright:before,
+.ion-android-arrow-dropup-circle:before,
+.ion-android-arrow-dropup:before,
+.ion-android-arrow-forward:before,
+.ion-android-arrow-up:before,
+.ion-android-attach:before,
+.ion-android-bar:before,
+.ion-android-bicycle:before,
+.ion-android-boat:before,
+.ion-android-bookmark:before,
+.ion-android-bulb:before,
+.ion-android-bus:before,
+.ion-android-calendar:before,
+.ion-android-call:before,
+.ion-android-camera:before,
+.ion-android-cancel:before,
+.ion-android-car:before,
+.ion-android-cart:before,
+.ion-android-chat:before,
+.ion-android-checkbox-blank:before,
+.ion-android-checkbox-outline-blank:before,
+.ion-android-checkbox-outline:before,
+.ion-android-checkbox:before,
+.ion-android-checkmark-circle:before,
+.ion-android-clipboard:before,
+.ion-android-close:before,
+.ion-android-cloud-circle:before,
+.ion-android-cloud-done:before,
+.ion-android-cloud-outline:before,
+.ion-android-cloud:before,
+.ion-android-color-palette:before,
+.ion-android-compass:before,
+.ion-android-contact:before,
+.ion-android-contacts:before,
+.ion-android-contract:before,
+.ion-android-create:before,
+.ion-android-delete:before,
+.ion-android-desktop:before,
+.ion-android-document:before,
+.ion-android-done-all:before,
+.ion-android-done:before,
+.ion-android-download:before,
+.ion-android-drafts:before,
+.ion-android-exit:before,
+.ion-android-expand:before,
+.ion-android-favorite-outline:before,
+.ion-android-favorite:before,
+.ion-android-film:before,
+.ion-android-folder-open:before,
+.ion-android-folder:before,
+.ion-android-funnel:before,
+.ion-android-globe:before,
+.ion-android-hand:before,
+.ion-android-hangout:before,
+.ion-android-happy:before,
+.ion-android-home:before,
+.ion-android-image:before,
+.ion-android-laptop:before,
+.ion-android-list:before,
+.ion-android-locate:before,
+.ion-android-lock:before,
+.ion-android-mail:before,
+.ion-android-map:before,
+.ion-android-menu:before,
+.ion-android-microphone-off:before,
+.ion-android-microphone:before,
+.ion-android-more-horizontal:before,
+.ion-android-more-vertical:before,
+.ion-android-navigate:before,
+.ion-android-notifications-none:before,
+.ion-android-notifications-off:before,
+.ion-android-notifications:before,
+.ion-android-open:before,
+.ion-android-options:before,
+.ion-android-people:before,
+.ion-android-person-add:before,
+.ion-android-person:before,
+.ion-android-phone-landscape:before,
+.ion-android-phone-portrait:before,
+.ion-android-pin:before,
+.ion-android-plane:before,
+.ion-android-playstore:before,
+.ion-android-print:before,
+.ion-android-radio-button-off:before,
+.ion-android-radio-button-on:before,
+.ion-android-refresh:before,
+.ion-android-remove-circle:before,
+.ion-android-remove:before,
+.ion-android-restaurant:before,
+.ion-android-sad:before,
+.ion-android-search:before,
+.ion-android-send:before,
+.ion-android-settings:before,
+.ion-android-share-alt:before,
+.ion-android-share:before,
+.ion-android-star-half:before,
+.ion-android-star-outline:before,
+.ion-android-star:before,
+.ion-android-stopwatch:before,
+.ion-android-subway:before,
+.ion-android-sunny:before,
+.ion-android-sync:before,
+.ion-android-textsms:before,
+.ion-android-time:before,
+.ion-android-train:before,
+.ion-android-unlock:before,
+.ion-android-upload:before,
+.ion-android-volume-down:before,
+.ion-android-volume-mute:before,
+.ion-android-volume-off:before,
+.ion-android-volume-up:before,
+.ion-android-walk:before,
+.ion-android-warning:before,
+.ion-android-watch:before,
+.ion-android-wifi:before,
+.ion-aperture:before,
+.ion-archive:before,
+.ion-arrow-down-a:before,
+.ion-arrow-down-b:before,
+.ion-arrow-down-c:before,
+.ion-arrow-expand:before,
+.ion-arrow-graph-down-left:before,
+.ion-arrow-graph-down-right:before,
+.ion-arrow-graph-up-left:before,
+.ion-arrow-graph-up-right:before,
+.ion-arrow-left-a:before,
+.ion-arrow-left-b:before,
+.ion-arrow-left-c:before,
+.ion-arrow-move:before,
+.ion-arrow-resize:before,
+.ion-arrow-return-left:before,
+.ion-arrow-return-right:before,
+.ion-arrow-right-a:before,
+.ion-arrow-right-b:before,
+.ion-arrow-right-c:before,
+.ion-arrow-shrink:before,
+.ion-arrow-swap:before,
+.ion-arrow-up-a:before,
+.ion-arrow-up-b:before,
+.ion-arrow-up-c:before,
+.ion-asterisk:before,
+.ion-at:before,
+.ion-backspace-outline:before,
+.ion-backspace:before,
+.ion-bag:before,
+.ion-battery-charging:before,
+.ion-battery-empty:before,
+.ion-battery-full:before,
+.ion-battery-half:before,
+.ion-battery-low:before,
+.ion-beaker:before,
+.ion-beer:before,
+.ion-bluetooth:before,
+.ion-bonfire:before,
+.ion-bookmark:before,
+.ion-bowtie:before,
+.ion-briefcase:before,
+.ion-bug:before,
+.ion-calculator:before,
+.ion-calendar:before,
+.ion-camera:before,
+.ion-card:before,
+.ion-cash:before,
+.ion-chatbox-working:before,
+.ion-chatbox:before,
+.ion-chatboxes:before,
+.ion-chatbubble-working:before,
+.ion-chatbubble:before,
+.ion-chatbubbles:before,
+.ion-checkmark-circled:before,
+.ion-checkmark-round:before,
+.ion-checkmark:before,
+.ion-chevron-down:before,
+.ion-chevron-left:before,
+.ion-chevron-right:before,
+.ion-chevron-up:before,
+.ion-clipboard:before,
+.ion-clock:before,
+.ion-close-circled:before,
+.ion-close-round:before,
+.ion-close:before,
+.ion-closed-captioning:before,
+.ion-cloud:before,
+.ion-code-download:before,
+.ion-code-working:before,
+.ion-code:before,
+.ion-coffee:before,
+.ion-compass:before,
+.ion-compose:before,
+.ion-connection-bars:before,
+.ion-contrast:before,
+.ion-crop:before,
+.ion-cube:before,
+.ion-disc:before,
+.ion-document-text:before,
+.ion-document:before,
+.ion-drag:before,
+.ion-earth:before,
+.ion-easel:before,
+.ion-edit:before,
+.ion-egg:before,
+.ion-eject:before,
+.ion-email-unread:before,
+.ion-email:before,
+.ion-erlenmeyer-flask-bubbles:before,
+.ion-erlenmeyer-flask:before,
+.ion-eye-disabled:before,
+.ion-eye:before,
+.ion-female:before,
+.ion-filing:before,
+.ion-film-marker:before,
+.ion-fireball:before,
+.ion-flag:before,
+.ion-flame:before,
+.ion-flash-off:before,
+.ion-flash:before,
+.ion-folder:before,
+.ion-fork-repo:before,
+.ion-fork:before,
+.ion-forward:before,
+.ion-funnel:before,
+.ion-gear-a:before,
+.ion-gear-b:before,
+.ion-grid:before,
+.ion-hammer:before,
+.ion-happy-outline:before,
+.ion-happy:before,
+.ion-headphone:before,
+.ion-heart-broken:before,
+.ion-heart:before,
+.ion-help-buoy:before,
+.ion-help-circled:before,
+.ion-help:before,
+.ion-home:before,
+.ion-icecream:before,
+.ion-image:before,
+.ion-images:before,
+.ion-information-circled:before,
+.ion-information:before,
+.ion-ionic:before,
+.ion-ios-alarm-outline:before,
+.ion-ios-alarm:before,
+.ion-ios-albums-outline:before,
+.ion-ios-albums:before,
+.ion-ios-americanfootball-outline:before,
+.ion-ios-americanfootball:before,
+.ion-ios-analytics-outline:before,
+.ion-ios-analytics:before,
+.ion-ios-arrow-back:before,
+.ion-ios-arrow-down:before,
+.ion-ios-arrow-forward:before,
+.ion-ios-arrow-left:before,
+.ion-ios-arrow-right:before,
+.ion-ios-arrow-thin-down:before,
+.ion-ios-arrow-thin-left:before,
+.ion-ios-arrow-thin-right:before,
+.ion-ios-arrow-thin-up:before,
+.ion-ios-arrow-up:before,
+.ion-ios-at-outline:before,
+.ion-ios-at:before,
+.ion-ios-barcode-outline:before,
+.ion-ios-barcode:before,
+.ion-ios-baseball-outline:before,
+.ion-ios-baseball:before,
+.ion-ios-basketball-outline:before,
+.ion-ios-basketball:before,
+.ion-ios-bell-outline:before,
+.ion-ios-bell:before,
+.ion-ios-body-outline:before,
+.ion-ios-body:before,
+.ion-ios-bolt-outline:before,
+.ion-ios-bolt:before,
+.ion-ios-book-outline:before,
+.ion-ios-book:before,
+.ion-ios-bookmarks-outline:before,
+.ion-ios-bookmarks:before,
+.ion-ios-box-outline:before,
+.ion-ios-box:before,
+.ion-ios-briefcase-outline:before,
+.ion-ios-briefcase:before,
+.ion-ios-browsers-outline:before,
+.ion-ios-browsers:before,
+.ion-ios-calculator-outline:before,
+.ion-ios-calculator:before,
+.ion-ios-calendar-outline:before,
+.ion-ios-calendar:before,
+.ion-ios-camera-outline:before,
+.ion-ios-camera:before,
+.ion-ios-cart-outline:before,
+.ion-ios-cart:before,
+.ion-ios-chatboxes-outline:before,
+.ion-ios-chatboxes:before,
+.ion-ios-chatbubble-outline:before,
+.ion-ios-chatbubble:before,
+.ion-ios-checkmark-empty:before,
+.ion-ios-checkmark-outline:before,
+.ion-ios-checkmark:before,
+.ion-ios-circle-filled:before,
+.ion-ios-circle-outline:before,
+.ion-ios-clock-outline:before,
+.ion-ios-clock:before,
+.ion-ios-close-empty:before,
+.ion-ios-close-outline:before,
+.ion-ios-close:before,
+.ion-ios-cloud-download-outline:before,
+.ion-ios-cloud-download:before,
+.ion-ios-cloud-outline:before,
+.ion-ios-cloud-upload-outline:before,
+.ion-ios-cloud-upload:before,
+.ion-ios-cloud:before,
+.ion-ios-cloudy-night-outline:before,
+.ion-ios-cloudy-night:before,
+.ion-ios-cloudy-outline:before,
+.ion-ios-cloudy:before,
+.ion-ios-cog-outline:before,
+.ion-ios-cog:before,
+.ion-ios-color-filter-outline:before,
+.ion-ios-color-filter:before,
+.ion-ios-color-wand-outline:before,
+.ion-ios-color-wand:before,
+.ion-ios-compose-outline:before,
+.ion-ios-compose:before,
+.ion-ios-contact-outline:before,
+.ion-ios-contact:before,
+.ion-ios-copy-outline:before,
+.ion-ios-copy:before,
+.ion-ios-crop-strong:before,
+.ion-ios-crop:before,
+.ion-ios-download-outline:before,
+.ion-ios-download:before,
+.ion-ios-drag:before,
+.ion-ios-email-outline:before,
+.ion-ios-email:before,
+.ion-ios-eye-outline:before,
+.ion-ios-eye:before,
+.ion-ios-fastforward-outline:before,
+.ion-ios-fastforward:before,
+.ion-ios-filing-outline:before,
+.ion-ios-filing:before,
+.ion-ios-film-outline:before,
+.ion-ios-film:before,
+.ion-ios-flag-outline:before,
+.ion-ios-flag:before,
+.ion-ios-flame-outline:before,
+.ion-ios-flame:before,
+.ion-ios-flask-outline:before,
+.ion-ios-flask:before,
+.ion-ios-flower-outline:before,
+.ion-ios-flower:before,
+.ion-ios-folder-outline:before,
+.ion-ios-folder:before,
+.ion-ios-football-outline:before,
+.ion-ios-football:before,
+.ion-ios-game-controller-a-outline:before,
+.ion-ios-game-controller-a:before,
+.ion-ios-game-controller-b-outline:before,
+.ion-ios-game-controller-b:before,
+.ion-ios-gear-outline:before,
+.ion-ios-gear:before,
+.ion-ios-glasses-outline:before,
+.ion-ios-glasses:before,
+.ion-ios-grid-view-outline:before,
+.ion-ios-grid-view:before,
+.ion-ios-heart-outline:before,
+.ion-ios-heart:before,
+.ion-ios-help-empty:before,
+.ion-ios-help-outline:before,
+.ion-ios-help:before,
+.ion-ios-home-outline:before,
+.ion-ios-home:before,
+.ion-ios-infinite-outline:before,
+.ion-ios-infinite:before,
+.ion-ios-information-empty:before,
+.ion-ios-information-outline:before,
+.ion-ios-information:before,
+.ion-ios-ionic-outline:before,
+.ion-ios-keypad-outline:before,
+.ion-ios-keypad:before,
+.ion-ios-lightbulb-outline:before,
+.ion-ios-lightbulb:before,
+.ion-ios-list-outline:before,
+.ion-ios-list:before,
+.ion-ios-location-outline:before,
+.ion-ios-location:before,
+.ion-ios-locked-outline:before,
+.ion-ios-locked:before,
+.ion-ios-loop-strong:before,
+.ion-ios-loop:before,
+.ion-ios-medical-outline:before,
+.ion-ios-medical:before,
+.ion-ios-medkit-outline:before,
+.ion-ios-medkit:before,
+.ion-ios-mic-off:before,
+.ion-ios-mic-outline:before,
+.ion-ios-mic:before,
+.ion-ios-minus-empty:before,
+.ion-ios-minus-outline:before,
+.ion-ios-minus:before,
+.ion-ios-monitor-outline:before,
+.ion-ios-monitor:before,
+.ion-ios-moon-outline:before,
+.ion-ios-moon:before,
+.ion-ios-more-outline:before,
+.ion-ios-more:before,
+.ion-ios-musical-note:before,
+.ion-ios-musical-notes:before,
+.ion-ios-navigate-outline:before,
+.ion-ios-navigate:before,
+.ion-ios-nutrition-outline:before,
+.ion-ios-nutrition:before,
+.ion-ios-paper-outline:before,
+.ion-ios-paper:before,
+.ion-ios-paperplane-outline:before,
+.ion-ios-paperplane:before,
+.ion-ios-partlysunny-outline:before,
+.ion-ios-partlysunny:before,
+.ion-ios-pause-outline:before,
+.ion-ios-pause:before,
+.ion-ios-paw-outline:before,
+.ion-ios-paw:before,
+.ion-ios-people-outline:before,
+.ion-ios-people:before,
+.ion-ios-person-outline:before,
+.ion-ios-person:before,
+.ion-ios-personadd-outline:before,
+.ion-ios-personadd:before,
+.ion-ios-photos-outline:before,
+.ion-ios-photos:before,
+.ion-ios-pie-outline:before,
+.ion-ios-pie:before,
+.ion-ios-pint-outline:before,
+.ion-ios-pint:before,
+.ion-ios-play-outline:before,
+.ion-ios-play:before,
+.ion-ios-plus-empty:before,
+.ion-ios-plus-outline:before,
+.ion-ios-plus:before,
+.ion-ios-pricetag-outline:before,
+.ion-ios-pricetag:before,
+.ion-ios-pricetags-outline:before,
+.ion-ios-pricetags:before,
+.ion-ios-printer-outline:before,
+.ion-ios-printer:before,
+.ion-ios-pulse-strong:before,
+.ion-ios-pulse:before,
+.ion-ios-rainy-outline:before,
+.ion-ios-rainy:before,
+.ion-ios-recording-outline:before,
+.ion-ios-recording:before,
+.ion-ios-redo-outline:before,
+.ion-ios-redo:before,
+.ion-ios-refresh-empty:before,
+.ion-ios-refresh-outline:before,
+.ion-ios-refresh:before,
+.ion-ios-reload:before,
+.ion-ios-reverse-camera-outline:before,
+.ion-ios-reverse-camera:before,
+.ion-ios-rewind-outline:before,
+.ion-ios-rewind:before,
+.ion-ios-rose-outline:before,
+.ion-ios-rose:before,
+.ion-ios-search-strong:before,
+.ion-ios-search:before,
+.ion-ios-settings-strong:before,
+.ion-ios-settings:before,
+.ion-ios-shuffle-strong:before,
+.ion-ios-shuffle:before,
+.ion-ios-skipbackward-outline:before,
+.ion-ios-skipbackward:before,
+.ion-ios-skipforward-outline:before,
+.ion-ios-skipforward:before,
+.ion-ios-snowy:before,
+.ion-ios-speedometer-outline:before,
+.ion-ios-speedometer:before,
+.ion-ios-star-half:before,
+.ion-ios-star-outline:before,
+.ion-ios-star:before,
+.ion-ios-stopwatch-outline:before,
+.ion-ios-stopwatch:before,
+.ion-ios-sunny-outline:before,
+.ion-ios-sunny:before,
+.ion-ios-telephone-outline:before,
+.ion-ios-telephone:before,
+.ion-ios-tennisball-outline:before,
+.ion-ios-tennisball:before,
+.ion-ios-thunderstorm-outline:before,
+.ion-ios-thunderstorm:before,
+.ion-ios-time-outline:before,
+.ion-ios-time:before,
+.ion-ios-timer-outline:before,
+.ion-ios-timer:before,
+.ion-ios-toggle-outline:before,
+.ion-ios-toggle:before,
+.ion-ios-trash-outline:before,
+.ion-ios-trash:before,
+.ion-ios-undo-outline:before,
+.ion-ios-undo:before,
+.ion-ios-unlocked-outline:before,
+.ion-ios-unlocked:before,
+.ion-ios-upload-outline:before,
+.ion-ios-upload:before,
+.ion-ios-videocam-outline:before,
+.ion-ios-videocam:before,
+.ion-ios-volume-high:before,
+.ion-ios-volume-low:before,
+.ion-ios-wineglass-outline:before,
+.ion-ios-wineglass:before,
+.ion-ios-world-outline:before,
+.ion-ios-world:before,
+.ion-ipad:before,
+.ion-iphone:before,
+.ion-ipod:before,
+.ion-jet:before,
+.ion-key:before,
+.ion-knife:before,
+.ion-laptop:before,
+.ion-leaf:before,
+.ion-levels:before,
+.ion-lightbulb:before,
+.ion-link:before,
+.ion-load-a:before,
+.ion-load-b:before,
+.ion-load-c:before,
+.ion-load-d:before,
+.ion-location:before,
+.ion-lock-combination:before,
+.ion-locked:before,
+.ion-log-in:before,
+.ion-log-out:before,
+.ion-loop:before,
+.ion-magnet:before,
+.ion-male:before,
+.ion-man:before,
+.ion-map:before,
+.ion-medkit:before,
+.ion-merge:before,
+.ion-mic-a:before,
+.ion-mic-b:before,
+.ion-mic-c:before,
+.ion-minus-circled:before,
+.ion-minus-round:before,
+.ion-minus:before,
+.ion-model-s:before,
+.ion-monitor:before,
+.ion-more:before,
+.ion-mouse:before,
+.ion-music-note:before,
+.ion-navicon-round:before,
+.ion-navicon:before,
+.ion-navigate:before,
+.ion-network:before,
+.ion-no-smoking:before,
+.ion-nuclear:before,
+.ion-outlet:before,
+.ion-paintbrush:before,
+.ion-paintbucket:before,
+.ion-paper-airplane:before,
+.ion-paperclip:before,
+.ion-pause:before,
+.ion-person-add:before,
+.ion-person-stalker:before,
+.ion-person:before,
+.ion-pie-graph:before,
+.ion-pin:before,
+.ion-pinpoint:before,
+.ion-pizza:before,
+.ion-plane:before,
+.ion-planet:before,
+.ion-play:before,
+.ion-playstation:before,
+.ion-plus-circled:before,
+.ion-plus-round:before,
+.ion-plus:before,
+.ion-podium:before,
+.ion-pound:before,
+.ion-power:before,
+.ion-pricetag:before,
+.ion-pricetags:before,
+.ion-printer:before,
+.ion-pull-request:before,
+.ion-qr-scanner:before,
+.ion-quote:before,
+.ion-radio-waves:before,
+.ion-record:before,
+.ion-refresh:before,
+.ion-reply-all:before,
+.ion-reply:before,
+.ion-ribbon-a:before,
+.ion-ribbon-b:before,
+.ion-sad-outline:before,
+.ion-sad:before,
+.ion-scissors:before,
+.ion-search:before,
+.ion-settings:before,
+.ion-share:before,
+.ion-shuffle:before,
+.ion-skip-backward:before,
+.ion-skip-forward:before,
+.ion-social-android-outline:before,
+.ion-social-android:before,
+.ion-social-angular-outline:before,
+.ion-social-angular:before,
+.ion-social-apple-outline:before,
+.ion-social-apple:before,
+.ion-social-bitcoin-outline:before,
+.ion-social-bitcoin:before,
+.ion-social-buffer-outline:before,
+.ion-social-buffer:before,
+.ion-social-chrome-outline:before,
+.ion-social-chrome:before,
+.ion-social-codepen-outline:before,
+.ion-social-codepen:before,
+.ion-social-css3-outline:before,
+.ion-social-css3:before,
+.ion-social-designernews-outline:before,
+.ion-social-designernews:before,
+.ion-social-dribbble-outline:before,
+.ion-social-dribbble:before,
+.ion-social-dropbox-outline:before,
+.ion-social-dropbox:before,
+.ion-social-euro-outline:before,
+.ion-social-euro:before,
+.ion-social-facebook-outline:before,
+.ion-social-facebook:before,
+.ion-social-foursquare-outline:before,
+.ion-social-foursquare:before,
+.ion-social-freebsd-devil:before,
+.ion-social-github-outline:before,
+.ion-social-github:before,
+.ion-social-google-outline:before,
+.ion-social-google:before,
+.ion-social-googleplus-outline:before,
+.ion-social-googleplus:before,
+.ion-social-hackernews-outline:before,
+.ion-social-hackernews:before,
+.ion-social-html5-outline:before,
+.ion-social-html5:before,
+.ion-social-instagram-outline:before,
+.ion-social-instagram:before,
+.ion-social-javascript-outline:before,
+.ion-social-javascript:before,
+.ion-social-linkedin-outline:before,
+.ion-social-linkedin:before,
+.ion-social-markdown:before,
+.ion-social-nodejs:before,
+.ion-social-octocat:before,
+.ion-social-pinterest-outline:before,
+.ion-social-pinterest:before,
+.ion-social-python:before,
+.ion-social-reddit-outline:before,
+.ion-social-reddit:before,
+.ion-social-rss-outline:before,
+.ion-social-rss:before,
+.ion-social-sass:before,
+.ion-social-skype-outline:before,
+.ion-social-skype:before,
+.ion-social-snapchat-outline:before,
+.ion-social-snapchat:before,
+.ion-social-tumblr-outline:before,
+.ion-social-tumblr:before,
+.ion-social-tux:before,
+.ion-social-twitch-outline:before,
+.ion-social-twitch:before,
+.ion-social-twitter-outline:before,
+.ion-social-twitter:before,
+.ion-social-usd-outline:before,
+.ion-social-usd:before,
+.ion-social-vimeo-outline:before,
+.ion-social-vimeo:before,
+.ion-social-whatsapp-outline:before,
+.ion-social-whatsapp:before,
+.ion-social-windows-outline:before,
+.ion-social-windows:before,
+.ion-social-wordpress-outline:before,
+.ion-social-wordpress:before,
+.ion-social-yahoo-outline:before,
+.ion-social-yahoo:before,
+.ion-social-yen-outline:before,
+.ion-social-yen:before,
+.ion-social-youtube-outline:before,
+.ion-social-youtube:before,
+.ion-soup-can-outline:before,
+.ion-soup-can:before,
+.ion-speakerphone:before,
+.ion-speedometer:before,
+.ion-spoon:before,
+.ion-star:before,
+.ion-stats-bars:before,
+.ion-steam:before,
+.ion-stop:before,
+.ion-thermometer:before,
+.ion-thumbsdown:before,
+.ion-thumbsup:before,
+.ion-toggle-filled:before,
+.ion-toggle:before,
+.ion-transgender:before,
+.ion-trash-a:before,
+.ion-trash-b:before,
+.ion-trophy:before,
+.ion-tshirt-outline:before,
+.ion-tshirt:before,
+.ion-umbrella:before,
+.ion-university:before,
+.ion-unlocked:before,
+.ion-upload:before,
+.ion-usb:before,
+.ion-videocamera:before,
+.ion-volume-high:before,
+.ion-volume-low:before,
+.ion-volume-medium:before,
+.ion-volume-mute:before,
+.ion-wand:before,
+.ion-waterdrop:before,
+.ion-wifi:before,
+.ion-wineglass:before,
+.ion-woman:before,
+.ion-wrench:before,
+.ion-xbox:before,
+.ionicons {
+    display: inline-block;
+    font-family: Ionicons;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.ion-alert:before {
+    content: "\F101"
+}
+
+.ion-alert-circled:before {
+    content: "\F100"
+}
+
+.ion-android-add:before {
+    content: "\F2C7"
+}
+
+.ion-android-add-circle:before {
+    content: "\F359"
+}
+
+.ion-android-alarm-clock:before {
+    content: "\F35A"
+}
+
+.ion-android-alert:before {
+    content: "\F35B"
+}
+
+.ion-android-apps:before {
+    content: "\F35C"
+}
+
+.ion-android-archive:before {
+    content: "\F2C9"
+}
+
+.ion-android-arrow-back:before {
+    content: "\F2CA"
+}
+
+.ion-android-arrow-down:before {
+    content: "\F35D"
+}
+
+.ion-android-arrow-dropdown:before {
+    content: "\F35F"
+}
+
+.ion-android-arrow-dropdown-circle:before {
+    content: "\F35E"
+}
+
+.ion-android-arrow-dropleft:before {
+    content: "\F361"
+}
+
+.ion-android-arrow-dropleft-circle:before {
+    content: "\F360"
+}
+
+.ion-android-arrow-dropright:before {
+    content: "\F363"
+}
+
+.ion-android-arrow-dropright-circle:before {
+    content: "\F362"
+}
+
+.ion-android-arrow-dropup:before {
+    content: "\F365"
+}
+
+.ion-android-arrow-dropup-circle:before {
+    content: "\F364"
+}
+
+.ion-android-arrow-forward:before {
+    content: "\F30F"
+}
+
+.ion-android-arrow-up:before {
+    content: "\F366"
+}
+
+.ion-android-attach:before {
+    content: "\F367"
+}
+
+.ion-android-bar:before {
+    content: "\F368"
+}
+
+.ion-android-bicycle:before {
+    content: "\F369"
+}
+
+.ion-android-boat:before {
+    content: "\F36A"
+}
+
+.ion-android-bookmark:before {
+    content: "\F36B"
+}
+
+.ion-android-bulb:before {
+    content: "\F36C"
+}
+
+.ion-android-bus:before {
+    content: "\F36D"
+}
+
+.ion-android-calendar:before {
+    content: "\F2D1"
+}
+
+.ion-android-call:before {
+    content: "\F2D2"
+}
+
+.ion-android-camera:before {
+    content: "\F2D3"
+}
+
+.ion-android-cancel:before {
+    content: "\F36E"
+}
+
+.ion-android-car:before {
+    content: "\F36F"
+}
+
+.ion-android-cart:before {
+    content: "\F370"
+}
+
+.ion-android-chat:before {
+    content: "\F2D4"
+}
+
+.ion-android-checkbox:before {
+    content: "\F374"
+}
+
+.ion-android-checkbox-blank:before {
+    content: "\F371"
+}
+
+.ion-android-checkbox-outline:before {
+    content: "\F373"
+}
+
+.ion-android-checkbox-outline-blank:before {
+    content: "\F372"
+}
+
+.ion-android-checkmark-circle:before {
+    content: "\F375"
+}
+
+.ion-android-clipboard:before {
+    content: "\F376"
+}
+
+.ion-android-close:before {
+    content: "\F2D7"
+}
+
+.ion-android-cloud:before {
+    content: "\F37A"
+}
+
+.ion-android-cloud-circle:before {
+    content: "\F377"
+}
+
+.ion-android-cloud-done:before {
+    content: "\F378"
+}
+
+.ion-android-cloud-outline:before {
+    content: "\F379"
+}
+
+.ion-android-color-palette:before {
+    content: "\F37B"
+}
+
+.ion-android-compass:before {
+    content: "\F37C"
+}
+
+.ion-android-contact:before {
+    content: "\F2D8"
+}
+
+.ion-android-contacts:before {
+    content: "\F2D9"
+}
+
+.ion-android-contract:before {
+    content: "\F37D"
+}
+
+.ion-android-create:before {
+    content: "\F37E"
+}
+
+.ion-android-delete:before {
+    content: "\F37F"
+}
+
+.ion-android-desktop:before {
+    content: "\F380"
+}
+
+.ion-android-document:before {
+    content: "\F381"
+}
+
+.ion-android-done:before {
+    content: "\F383"
+}
+
+.ion-android-done-all:before {
+    content: "\F382"
+}
+
+.ion-android-download:before {
+    content: "\F2DD"
+}
+
+.ion-android-drafts:before {
+    content: "\F384"
+}
+
+.ion-android-exit:before {
+    content: "\F385"
+}
+
+.ion-android-expand:before {
+    content: "\F386"
+}
+
+.ion-android-favorite:before {
+    content: "\F388"
+}
+
+.ion-android-favorite-outline:before {
+    content: "\F387"
+}
+
+.ion-android-film:before {
+    content: "\F389"
+}
+
+.ion-android-folder:before {
+    content: "\F2E0"
+}
+
+.ion-android-folder-open:before {
+    content: "\F38A"
+}
+
+.ion-android-funnel:before {
+    content: "\F38B"
+}
+
+.ion-android-globe:before {
+    content: "\F38C"
+}
+
+.ion-android-hand:before {
+    content: "\F2E3"
+}
+
+.ion-android-hangout:before {
+    content: "\F38D"
+}
+
+.ion-android-happy:before {
+    content: "\F38E"
+}
+
+.ion-android-home:before {
+    content: "\F38F"
+}
+
+.ion-android-image:before {
+    content: "\F2E4"
+}
+
+.ion-android-laptop:before {
+    content: "\F390"
+}
+
+.ion-android-list:before {
+    content: "\F391"
+}
+
+.ion-android-locate:before {
+    content: "\F2E9"
+}
+
+.ion-android-lock:before {
+    content: "\F392"
+}
+
+.ion-android-mail:before {
+    content: "\F2EB"
+}
+
+.ion-android-map:before {
+    content: "\F393"
+}
+
+.ion-android-menu:before {
+    content: "\F394"
+}
+
+.ion-android-microphone:before {
+    content: "\F2EC"
+}
+
+.ion-android-microphone-off:before {
+    content: "\F395"
+}
+
+.ion-android-more-horizontal:before {
+    content: "\F396"
+}
+
+.ion-android-more-vertical:before {
+    content: "\F397"
+}
+
+.ion-android-navigate:before {
+    content: "\F398"
+}
+
+.ion-android-notifications:before {
+    content: "\F39B"
+}
+
+.ion-android-notifications-none:before {
+    content: "\F399"
+}
+
+.ion-android-notifications-off:before {
+    content: "\F39A"
+}
+
+.ion-android-open:before {
+    content: "\F39C"
+}
+
+.ion-android-options:before {
+    content: "\F39D"
+}
+
+.ion-android-people:before {
+    content: "\F39E"
+}
+
+.ion-android-person:before {
+    content: "\F3A0"
+}
+
+.ion-android-person-add:before {
+    content: "\F39F"
+}
+
+.ion-android-phone-landscape:before {
+    content: "\F3A1"
+}
+
+.ion-android-phone-portrait:before {
+    content: "\F3A2"
+}
+
+.ion-android-pin:before {
+    content: "\F3A3"
+}
+
+.ion-android-plane:before {
+    content: "\F3A4"
+}
+
+.ion-android-playstore:before {
+    content: "\F2F0"
+}
+
+.ion-android-print:before {
+    content: "\F3A5"
+}
+
+.ion-android-radio-button-off:before {
+    content: "\F3A6"
+}
+
+.ion-android-radio-button-on:before {
+    content: "\F3A7"
+}
+
+.ion-android-refresh:before {
+    content: "\F3A8"
+}
+
+.ion-android-remove:before {
+    content: "\F2F4"
+}
+
+.ion-android-remove-circle:before {
+    content: "\F3A9"
+}
+
+.ion-android-restaurant:before {
+    content: "\F3AA"
+}
+
+.ion-android-sad:before {
+    content: "\F3AB"
+}
+
+.ion-android-search:before {
+    content: "\F2F5"
+}
+
+.ion-android-send:before {
+    content: "\F2F6"
+}
+
+.ion-android-settings:before {
+    content: "\F2F7"
+}
+
+.ion-android-share:before {
+    content: "\F2F8"
+}
+
+.ion-android-share-alt:before {
+    content: "\F3AC"
+}
+
+.ion-android-star:before {
+    content: "\F2FC"
+}
+
+.ion-android-star-half:before {
+    content: "\F3AD"
+}
+
+.ion-android-star-outline:before {
+    content: "\F3AE"
+}
+
+.ion-android-stopwatch:before {
+    content: "\F2FD"
+}
+
+.ion-android-subway:before {
+    content: "\F3AF"
+}
+
+.ion-android-sunny:before {
+    content: "\F3B0"
+}
+
+.ion-android-sync:before {
+    content: "\F3B1"
+}
+
+.ion-android-textsms:before {
+    content: "\F3B2"
+}
+
+.ion-android-time:before {
+    content: "\F3B3"
+}
+
+.ion-android-train:before {
+    content: "\F3B4"
+}
+
+.ion-android-unlock:before {
+    content: "\F3B5"
+}
+
+.ion-android-upload:before {
+    content: "\F3B6"
+}
+
+.ion-android-volume-down:before {
+    content: "\F3B7"
+}
+
+.ion-android-volume-mute:before {
+    content: "\F3B8"
+}
+
+.ion-android-volume-off:before {
+    content: "\F3B9"
+}
+
+.ion-android-volume-up:before {
+    content: "\F3BA"
+}
+
+.ion-android-walk:before {
+    content: "\F3BB"
+}
+
+.ion-android-warning:before {
+    content: "\F3BC"
+}
+
+.ion-android-watch:before {
+    content: "\F3BD"
+}
+
+.ion-android-wifi:before {
+    content: "\F305"
+}
+
+.ion-aperture:before {
+    content: "\F313"
+}
+
+.ion-archive:before {
+    content: "\F102"
+}
+
+.ion-arrow-down-a:before {
+    content: "\F103"
+}
+
+.ion-arrow-down-b:before {
+    content: "\F104"
+}
+
+.ion-arrow-down-c:before {
+    content: "\F105"
+}
+
+.ion-arrow-expand:before {
+    content: "\F25E"
+}
+
+.ion-arrow-graph-down-left:before {
+    content: "\F25F"
+}
+
+.ion-arrow-graph-down-right:before {
+    content: "\F260"
+}
+
+.ion-arrow-graph-up-left:before {
+    content: "\F261"
+}
+
+.ion-arrow-graph-up-right:before {
+    content: "\F262"
+}
+
+.ion-arrow-left-a:before {
+    content: "\F106"
+}
+
+.ion-arrow-left-b:before {
+    content: "\F107"
+}
+
+.ion-arrow-left-c:before {
+    content: "\F108"
+}
+
+.ion-arrow-move:before {
+    content: "\F263"
+}
+
+.ion-arrow-resize:before {
+    content: "\F264"
+}
+
+.ion-arrow-return-left:before {
+    content: "\F265"
+}
+
+.ion-arrow-return-right:before {
+    content: "\F266"
+}
+
+.ion-arrow-right-a:before {
+    content: "\F109"
+}
+
+.ion-arrow-right-b:before {
+    content: "\F10A"
+}
+
+.ion-arrow-right-c:before {
+    content: "\F10B"
+}
+
+.ion-arrow-shrink:before {
+    content: "\F267"
+}
+
+.ion-arrow-swap:before {
+    content: "\F268"
+}
+
+.ion-arrow-up-a:before {
+    content: "\F10C"
+}
+
+.ion-arrow-up-b:before {
+    content: "\F10D"
+}
+
+.ion-arrow-up-c:before {
+    content: "\F10E"
+}
+
+.ion-asterisk:before {
+    content: "\F314"
+}
+
+.ion-at:before {
+    content: "\F10F"
+}
+
+.ion-backspace:before {
+    content: "\F3BF"
+}
+
+.ion-backspace-outline:before {
+    content: "\F3BE"
+}
+
+.ion-bag:before {
+    content: "\F110"
+}
+
+.ion-battery-charging:before {
+    content: "\F111"
+}
+
+.ion-battery-empty:before {
+    content: "\F112"
+}
+
+.ion-battery-full:before {
+    content: "\F113"
+}
+
+.ion-battery-half:before {
+    content: "\F114"
+}
+
+.ion-battery-low:before {
+    content: "\F115"
+}
+
+.ion-beaker:before {
+    content: "\F269"
+}
+
+.ion-beer:before {
+    content: "\F26A"
+}
+
+.ion-bluetooth:before {
+    content: "\F116"
+}
+
+.ion-bonfire:before {
+    content: "\F315"
+}
+
+.ion-bookmark:before {
+    content: "\F26B"
+}
+
+.ion-bowtie:before {
+    content: "\F3C0"
+}
+
+.ion-briefcase:before {
+    content: "\F26C"
+}
+
+.ion-bug:before {
+    content: "\F2BE"
+}
+
+.ion-calculator:before {
+    content: "\F26D"
+}
+
+.ion-calendar:before {
+    content: "\F117"
+}
+
+.ion-camera:before {
+    content: "\F118"
+}
+
+.ion-card:before {
+    content: "\F119"
+}
+
+.ion-cash:before {
+    content: "\F316"
+}
+
+.ion-chatbox:before {
+    content: "\F11B"
+}
+
+.ion-chatbox-working:before {
+    content: "\F11A"
+}
+
+.ion-chatboxes:before {
+    content: "\F11C"
+}
+
+.ion-chatbubble:before {
+    content: "\F11E"
+}
+
+.ion-chatbubble-working:before {
+    content: "\F11D"
+}
+
+.ion-chatbubbles:before {
+    content: "\F11F"
+}
+
+.ion-checkmark:before {
+    content: "\F122"
+}
+
+.ion-checkmark-circled:before {
+    content: "\F120"
+}
+
+.ion-checkmark-round:before {
+    content: "\F121"
+}
+
+.ion-chevron-down:before {
+    content: "\F123"
+}
+
+.ion-chevron-left:before {
+    content: "\F124"
+}
+
+.ion-chevron-right:before {
+    content: "\F125"
+}
+
+.ion-chevron-up:before {
+    content: "\F126"
+}
+
+.ion-clipboard:before {
+    content: "\F127"
+}
+
+.ion-clock:before {
+    content: "\F26E"
+}
+
+.ion-close:before {
+    content: "\F12A"
+}
+
+.ion-close-circled:before {
+    content: "\F128"
+}
+
+.ion-close-round:before {
+    content: "\F129"
+}
+
+.ion-closed-captioning:before {
+    content: "\F317"
+}
+
+.ion-cloud:before {
+    content: "\F12B"
+}
+
+.ion-code:before {
+    content: "\F271"
+}
+
+.ion-code-download:before {
+    content: "\F26F"
+}
+
+.ion-code-working:before {
+    content: "\F270"
+}
+
+.ion-coffee:before {
+    content: "\F272"
+}
+
+.ion-compass:before {
+    content: "\F273"
+}
+
+.ion-compose:before {
+    content: "\F12C"
+}
+
+.ion-connection-bars:before {
+    content: "\F274"
+}
+
+.ion-contrast:before {
+    content: "\F275"
+}
+
+.ion-crop:before {
+    content: "\F3C1"
+}
+
+.ion-cube:before {
+    content: "\F318"
+}
+
+.ion-disc:before {
+    content: "\F12D"
+}
+
+.ion-document:before {
+    content: "\F12F"
+}
+
+.ion-document-text:before {
+    content: "\F12E"
+}
+
+.ion-drag:before {
+    content: "\F130"
+}
+
+.ion-earth:before {
+    content: "\F276"
+}
+
+.ion-easel:before {
+    content: "\F3C2"
+}
+
+.ion-edit:before {
+    content: "\F2BF"
+}
+
+.ion-egg:before {
+    content: "\F277"
+}
+
+.ion-eject:before {
+    content: "\F131"
+}
+
+.ion-email:before {
+    content: "\F132"
+}
+
+.ion-email-unread:before {
+    content: "\F3C3"
+}
+
+.ion-erlenmeyer-flask:before {
+    content: "\F3C5"
+}
+
+.ion-erlenmeyer-flask-bubbles:before {
+    content: "\F3C4"
+}
+
+.ion-eye:before {
+    content: "\F133"
+}
+
+.ion-eye-disabled:before {
+    content: "\F306"
+}
+
+.ion-female:before {
+    content: "\F278"
+}
+
+.ion-filing:before {
+    content: "\F134"
+}
+
+.ion-film-marker:before {
+    content: "\F135"
+}
+
+.ion-fireball:before {
+    content: "\F319"
+}
+
+.ion-flag:before {
+    content: "\F279"
+}
+
+.ion-flame:before {
+    content: "\F31A"
+}
+
+.ion-flash:before {
+    content: "\F137"
+}
+
+.ion-flash-off:before {
+    content: "\F136"
+}
+
+.ion-folder:before {
+    content: "\F139"
+}
+
+.ion-fork:before {
+    content: "\F27A"
+}
+
+.ion-fork-repo:before {
+    content: "\F2C0"
+}
+
+.ion-forward:before {
+    content: "\F13A"
+}
+
+.ion-funnel:before {
+    content: "\F31B"
+}
+
+.ion-gear-a:before {
+    content: "\F13D"
+}
+
+.ion-gear-b:before {
+    content: "\F13E"
+}
+
+.ion-grid:before {
+    content: "\F13F"
+}
+
+.ion-hammer:before {
+    content: "\F27B"
+}
+
+.ion-happy:before {
+    content: "\F31C"
+}
+
+.ion-happy-outline:before {
+    content: "\F3C6"
+}
+
+.ion-headphone:before {
+    content: "\F140"
+}
+
+.ion-heart:before {
+    content: "\F141"
+}
+
+.ion-heart-broken:before {
+    content: "\F31D"
+}
+
+.ion-help:before {
+    content: "\F143"
+}
+
+.ion-help-buoy:before {
+    content: "\F27C"
+}
+
+.ion-help-circled:before {
+    content: "\F142"
+}
+
+.ion-home:before {
+    content: "\F144"
+}
+
+.ion-icecream:before {
+    content: "\F27D"
+}
+
+.ion-image:before {
+    content: "\F147"
+}
+
+.ion-images:before {
+    content: "\F148"
+}
+
+.ion-information:before {
+    content: "\F14A"
+}
+
+.ion-information-circled:before {
+    content: "\F149"
+}
+
+.ion-ionic:before {
+    content: "\F14B"
+}
+
+.ion-ios-alarm:before {
+    content: "\F3C8"
+}
+
+.ion-ios-alarm-outline:before {
+    content: "\F3C7"
+}
+
+.ion-ios-albums:before {
+    content: "\F3CA"
+}
+
+.ion-ios-albums-outline:before {
+    content: "\F3C9"
+}
+
+.ion-ios-americanfootball:before {
+    content: "\F3CC"
+}
+
+.ion-ios-americanfootball-outline:before {
+    content: "\F3CB"
+}
+
+.ion-ios-analytics:before {
+    content: "\F3CE"
+}
+
+.ion-ios-analytics-outline:before {
+    content: "\F3CD"
+}
+
+.ion-ios-arrow-back:before {
+    content: "\F3CF"
+}
+
+.ion-ios-arrow-down:before {
+    content: "\F3D0"
+}
+
+.ion-ios-arrow-forward:before {
+    content: "\F3D1"
+}
+
+.ion-ios-arrow-left:before {
+    content: "\F3D2"
+}
+
+.ion-ios-arrow-right:before {
+    content: "\F3D3"
+}
+
+.ion-ios-arrow-thin-down:before {
+    content: "\F3D4"
+}
+
+.ion-ios-arrow-thin-left:before {
+    content: "\F3D5"
+}
+
+.ion-ios-arrow-thin-right:before {
+    content: "\F3D6"
+}
+
+.ion-ios-arrow-thin-up:before {
+    content: "\F3D7"
+}
+
+.ion-ios-arrow-up:before {
+    content: "\F3D8"
+}
+
+.ion-ios-at:before {
+    content: "\F3DA"
+}
+
+.ion-ios-at-outline:before {
+    content: "\F3D9"
+}
+
+.ion-ios-barcode:before {
+    content: "\F3DC"
+}
+
+.ion-ios-barcode-outline:before {
+    content: "\F3DB"
+}
+
+.ion-ios-baseball:before {
+    content: "\F3DE"
+}
+
+.ion-ios-baseball-outline:before {
+    content: "\F3DD"
+}
+
+.ion-ios-basketball:before {
+    content: "\F3E0"
+}
+
+.ion-ios-basketball-outline:before {
+    content: "\F3DF"
+}
+
+.ion-ios-bell:before {
+    content: "\F3E2"
+}
+
+.ion-ios-bell-outline:before {
+    content: "\F3E1"
+}
+
+.ion-ios-body:before {
+    content: "\F3E4"
+}
+
+.ion-ios-body-outline:before {
+    content: "\F3E3"
+}
+
+.ion-ios-bolt:before {
+    content: "\F3E6"
+}
+
+.ion-ios-bolt-outline:before {
+    content: "\F3E5"
+}
+
+.ion-ios-book:before {
+    content: "\F3E8"
+}
+
+.ion-ios-book-outline:before {
+    content: "\F3E7"
+}
+
+.ion-ios-bookmarks:before {
+    content: "\F3EA"
+}
+
+.ion-ios-bookmarks-outline:before {
+    content: "\F3E9"
+}
+
+.ion-ios-box:before {
+    content: "\F3EC"
+}
+
+.ion-ios-box-outline:before {
+    content: "\F3EB"
+}
+
+.ion-ios-briefcase:before {
+    content: "\F3EE"
+}
+
+.ion-ios-briefcase-outline:before {
+    content: "\F3ED"
+}
+
+.ion-ios-browsers:before {
+    content: "\F3F0"
+}
+
+.ion-ios-browsers-outline:before {
+    content: "\F3EF"
+}
+
+.ion-ios-calculator:before {
+    content: "\F3F2"
+}
+
+.ion-ios-calculator-outline:before {
+    content: "\F3F1"
+}
+
+.ion-ios-calendar:before {
+    content: "\F3F4"
+}
+
+.ion-ios-calendar-outline:before {
+    content: "\F3F3"
+}
+
+.ion-ios-camera:before {
+    content: "\F3F6"
+}
+
+.ion-ios-camera-outline:before {
+    content: "\F3F5"
+}
+
+.ion-ios-cart:before {
+    content: "\F3F8"
+}
+
+.ion-ios-cart-outline:before {
+    content: "\F3F7"
+}
+
+.ion-ios-chatboxes:before {
+    content: "\F3FA"
+}
+
+.ion-ios-chatboxes-outline:before {
+    content: "\F3F9"
+}
+
+.ion-ios-chatbubble:before {
+    content: "\F3FC"
+}
+
+.ion-ios-chatbubble-outline:before {
+    content: "\F3FB"
+}
+
+.ion-ios-checkmark:before {
+    content: "\F3FF"
+}
+
+.ion-ios-checkmark-empty:before {
+    content: "\F3FD"
+}
+
+.ion-ios-checkmark-outline:before {
+    content: "\F3FE"
+}
+
+.ion-ios-circle-filled:before {
+    content: "\F400"
+}
+
+.ion-ios-circle-outline:before {
+    content: "\F401"
+}
+
+.ion-ios-clock:before {
+    content: "\F403"
+}
+
+.ion-ios-clock-outline:before {
+    content: "\F402"
+}
+
+.ion-ios-close:before {
+    content: "\F406"
+}
+
+.ion-ios-close-empty:before {
+    content: "\F404"
+}
+
+.ion-ios-close-outline:before {
+    content: "\F405"
+}
+
+.ion-ios-cloud:before {
+    content: "\F40C"
+}
+
+.ion-ios-cloud-download:before {
+    content: "\F408"
+}
+
+.ion-ios-cloud-download-outline:before {
+    content: "\F407"
+}
+
+.ion-ios-cloud-outline:before {
+    content: "\F409"
+}
+
+.ion-ios-cloud-upload:before {
+    content: "\F40B"
+}
+
+.ion-ios-cloud-upload-outline:before {
+    content: "\F40A"
+}
+
+.ion-ios-cloudy:before {
+    content: "\F410"
+}
+
+.ion-ios-cloudy-night:before {
+    content: "\F40E"
+}
+
+.ion-ios-cloudy-night-outline:before {
+    content: "\F40D"
+}
+
+.ion-ios-cloudy-outline:before {
+    content: "\F40F"
+}
+
+.ion-ios-cog:before {
+    content: "\F412"
+}
+
+.ion-ios-cog-outline:before {
+    content: "\F411"
+}
+
+.ion-ios-color-filter:before {
+    content: "\F414"
+}
+
+.ion-ios-color-filter-outline:before {
+    content: "\F413"
+}
+
+.ion-ios-color-wand:before {
+    content: "\F416"
+}
+
+.ion-ios-color-wand-outline:before {
+    content: "\F415"
+}
+
+.ion-ios-compose:before {
+    content: "\F418"
+}
+
+.ion-ios-compose-outline:before {
+    content: "\F417"
+}
+
+.ion-ios-contact:before {
+    content: "\F41A"
+}
+
+.ion-ios-contact-outline:before {
+    content: "\F419"
+}
+
+.ion-ios-copy:before {
+    content: "\F41C"
+}
+
+.ion-ios-copy-outline:before {
+    content: "\F41B"
+}
+
+.ion-ios-crop:before {
+    content: "\F41E"
+}
+
+.ion-ios-crop-strong:before {
+    content: "\F41D"
+}
+
+.ion-ios-download:before {
+    content: "\F420"
+}
+
+.ion-ios-download-outline:before {
+    content: "\F41F"
+}
+
+.ion-ios-drag:before {
+    content: "\F421"
+}
+
+.ion-ios-email:before {
+    content: "\F423"
+}
+
+.ion-ios-email-outline:before {
+    content: "\F422"
+}
+
+.ion-ios-eye:before {
+    content: "\F425"
+}
+
+.ion-ios-eye-outline:before {
+    content: "\F424"
+}
+
+.ion-ios-fastforward:before {
+    content: "\F427"
+}
+
+.ion-ios-fastforward-outline:before {
+    content: "\F426"
+}
+
+.ion-ios-filing:before {
+    content: "\F429"
+}
+
+.ion-ios-filing-outline:before {
+    content: "\F428"
+}
+
+.ion-ios-film:before {
+    content: "\F42B"
+}
+
+.ion-ios-film-outline:before {
+    content: "\F42A"
+}
+
+.ion-ios-flag:before {
+    content: "\F42D"
+}
+
+.ion-ios-flag-outline:before {
+    content: "\F42C"
+}
+
+.ion-ios-flame:before {
+    content: "\F42F"
+}
+
+.ion-ios-flame-outline:before {
+    content: "\F42E"
+}
+
+.ion-ios-flask:before {
+    content: "\F431"
+}
+
+.ion-ios-flask-outline:before {
+    content: "\F430"
+}
+
+.ion-ios-flower:before {
+    content: "\F433"
+}
+
+.ion-ios-flower-outline:before {
+    content: "\F432"
+}
+
+.ion-ios-folder:before {
+    content: "\F435"
+}
+
+.ion-ios-folder-outline:before {
+    content: "\F434"
+}
+
+.ion-ios-football:before {
+    content: "\F437"
+}
+
+.ion-ios-football-outline:before {
+    content: "\F436"
+}
+
+.ion-ios-game-controller-a:before {
+    content: "\F439"
+}
+
+.ion-ios-game-controller-a-outline:before {
+    content: "\F438"
+}
+
+.ion-ios-game-controller-b:before {
+    content: "\F43B"
+}
+
+.ion-ios-game-controller-b-outline:before {
+    content: "\F43A"
+}
+
+.ion-ios-gear:before {
+    content: "\F43D"
+}
+
+.ion-ios-gear-outline:before {
+    content: "\F43C"
+}
+
+.ion-ios-glasses:before {
+    content: "\F43F"
+}
+
+.ion-ios-glasses-outline:before {
+    content: "\F43E"
+}
+
+.ion-ios-grid-view:before {
+    content: "\F441"
+}
+
+.ion-ios-grid-view-outline:before {
+    content: "\F440"
+}
+
+.ion-ios-heart:before {
+    content: "\F443"
+}
+
+.ion-ios-heart-outline:before {
+    content: "\F442"
+}
+
+.ion-ios-help:before {
+    content: "\F446"
+}
+
+.ion-ios-help-empty:before {
+    content: "\F444"
+}
+
+.ion-ios-help-outline:before {
+    content: "\F445"
+}
+
+.ion-ios-home:before {
+    content: "\F448"
+}
+
+.ion-ios-home-outline:before {
+    content: "\F447"
+}
+
+.ion-ios-infinite:before {
+    content: "\F44A"
+}
+
+.ion-ios-infinite-outline:before {
+    content: "\F449"
+}
+
+.ion-ios-information:before {
+    content: "\F44D"
+}
+
+.ion-ios-information-empty:before {
+    content: "\F44B"
+}
+
+.ion-ios-information-outline:before {
+    content: "\F44C"
+}
+
+.ion-ios-ionic-outline:before {
+    content: "\F44E"
+}
+
+.ion-ios-keypad:before {
+    content: "\F450"
+}
+
+.ion-ios-keypad-outline:before {
+    content: "\F44F"
+}
+
+.ion-ios-lightbulb:before {
+    content: "\F452"
+}
+
+.ion-ios-lightbulb-outline:before {
+    content: "\F451"
+}
+
+.ion-ios-list:before {
+    content: "\F454"
+}
+
+.ion-ios-list-outline:before {
+    content: "\F453"
+}
+
+.ion-ios-location:before {
+    content: "\F456"
+}
+
+.ion-ios-location-outline:before {
+    content: "\F455"
+}
+
+.ion-ios-locked:before {
+    content: "\F458"
+}
+
+.ion-ios-locked-outline:before {
+    content: "\F457"
+}
+
+.ion-ios-loop:before {
+    content: "\F45A"
+}
+
+.ion-ios-loop-strong:before {
+    content: "\F459"
+}
+
+.ion-ios-medical:before {
+    content: "\F45C"
+}
+
+.ion-ios-medical-outline:before {
+    content: "\F45B"
+}
+
+.ion-ios-medkit:before {
+    content: "\F45E"
+}
+
+.ion-ios-medkit-outline:before {
+    content: "\F45D"
+}
+
+.ion-ios-mic:before {
+    content: "\F461"
+}
+
+.ion-ios-mic-off:before {
+    content: "\F45F"
+}
+
+.ion-ios-mic-outline:before {
+    content: "\F460"
+}
+
+.ion-ios-minus:before {
+    content: "\F464"
+}
+
+.ion-ios-minus-empty:before {
+    content: "\F462"
+}
+
+.ion-ios-minus-outline:before {
+    content: "\F463"
+}
+
+.ion-ios-monitor:before {
+    content: "\F466"
+}
+
+.ion-ios-monitor-outline:before {
+    content: "\F465"
+}
+
+.ion-ios-moon:before {
+    content: "\F468"
+}
+
+.ion-ios-moon-outline:before {
+    content: "\F467"
+}
+
+.ion-ios-more:before {
+    content: "\F46A"
+}
+
+.ion-ios-more-outline:before {
+    content: "\F469"
+}
+
+.ion-ios-musical-note:before {
+    content: "\F46B"
+}
+
+.ion-ios-musical-notes:before {
+    content: "\F46C"
+}
+
+.ion-ios-navigate:before {
+    content: "\F46E"
+}
+
+.ion-ios-navigate-outline:before {
+    content: "\F46D"
+}
+
+.ion-ios-nutrition:before {
+    content: "\F470"
+}
+
+.ion-ios-nutrition-outline:before {
+    content: "\F46F"
+}
+
+.ion-ios-paper:before {
+    content: "\F472"
+}
+
+.ion-ios-paper-outline:before {
+    content: "\F471"
+}
+
+.ion-ios-paperplane:before {
+    content: "\F474"
+}
+
+.ion-ios-paperplane-outline:before {
+    content: "\F473"
+}
+
+.ion-ios-partlysunny:before {
+    content: "\F476"
+}
+
+.ion-ios-partlysunny-outline:before {
+    content: "\F475"
+}
+
+.ion-ios-pause:before {
+    content: "\F478"
+}
+
+.ion-ios-pause-outline:before {
+    content: "\F477"
+}
+
+.ion-ios-paw:before {
+    content: "\F47A"
+}
+
+.ion-ios-paw-outline:before {
+    content: "\F479"
+}
+
+.ion-ios-people:before {
+    content: "\F47C"
+}
+
+.ion-ios-people-outline:before {
+    content: "\F47B"
+}
+
+.ion-ios-person:before {
+    content: "\F47E"
+}
+
+.ion-ios-person-outline:before {
+    content: "\F47D"
+}
+
+.ion-ios-personadd:before {
+    content: "\F480"
+}
+
+.ion-ios-personadd-outline:before {
+    content: "\F47F"
+}
+
+.ion-ios-photos:before {
+    content: "\F482"
+}
+
+.ion-ios-photos-outline:before {
+    content: "\F481"
+}
+
+.ion-ios-pie:before {
+    content: "\F484"
+}
+
+.ion-ios-pie-outline:before {
+    content: "\F483"
+}
+
+.ion-ios-pint:before {
+    content: "\F486"
+}
+
+.ion-ios-pint-outline:before {
+    content: "\F485"
+}
+
+.ion-ios-play:before {
+    content: "\F488"
+}
+
+.ion-ios-play-outline:before {
+    content: "\F487"
+}
+
+.ion-ios-plus:before {
+    content: "\F48B"
+}
+
+.ion-ios-plus-empty:before {
+    content: "\F489"
+}
+
+.ion-ios-plus-outline:before {
+    content: "\F48A"
+}
+
+.ion-ios-pricetag:before {
+    content: "\F48D"
+}
+
+.ion-ios-pricetag-outline:before {
+    content: "\F48C"
+}
+
+.ion-ios-pricetags:before {
+    content: "\F48F"
+}
+
+.ion-ios-pricetags-outline:before {
+    content: "\F48E"
+}
+
+.ion-ios-printer:before {
+    content: "\F491"
+}
+
+.ion-ios-printer-outline:before {
+    content: "\F490"
+}
+
+.ion-ios-pulse:before {
+    content: "\F493"
+}
+
+.ion-ios-pulse-strong:before {
+    content: "\F492"
+}
+
+.ion-ios-rainy:before {
+    content: "\F495"
+}
+
+.ion-ios-rainy-outline:before {
+    content: "\F494"
+}
+
+.ion-ios-recording:before {
+    content: "\F497"
+}
+
+.ion-ios-recording-outline:before {
+    content: "\F496"
+}
+
+.ion-ios-redo:before {
+    content: "\F499"
+}
+
+.ion-ios-redo-outline:before {
+    content: "\F498"
+}
+
+.ion-ios-refresh:before {
+    content: "\F49C"
+}
+
+.ion-ios-refresh-empty:before {
+    content: "\F49A"
+}
+
+.ion-ios-refresh-outline:before {
+    content: "\F49B"
+}
+
+.ion-ios-reload:before {
+    content: "\F49D"
+}
+
+.ion-ios-reverse-camera:before {
+    content: "\F49F"
+}
+
+.ion-ios-reverse-camera-outline:before {
+    content: "\F49E"
+}
+
+.ion-ios-rewind:before {
+    content: "\F4A1"
+}
+
+.ion-ios-rewind-outline:before {
+    content: "\F4A0"
+}
+
+.ion-ios-rose:before {
+    content: "\F4A3"
+}
+
+.ion-ios-rose-outline:before {
+    content: "\F4A2"
+}
+
+.ion-ios-search:before {
+    content: "\F4A5"
+}
+
+.ion-ios-search-strong:before {
+    content: "\F4A4"
+}
+
+.ion-ios-settings:before {
+    content: "\F4A7"
+}
+
+.ion-ios-settings-strong:before {
+    content: "\F4A6"
+}
+
+.ion-ios-shuffle:before {
+    content: "\F4A9"
+}
+
+.ion-ios-shuffle-strong:before {
+    content: "\F4A8"
+}
+
+.ion-ios-skipbackward:before {
+    content: "\F4AB"
+}
+
+.ion-ios-skipbackward-outline:before {
+    content: "\F4AA"
+}
+
+.ion-ios-skipforward:before {
+    content: "\F4AD"
+}
+
+.ion-ios-skipforward-outline:before {
+    content: "\F4AC"
+}
+
+.ion-ios-snowy:before {
+    content: "\F4AE"
+}
+
+.ion-ios-speedometer:before {
+    content: "\F4B0"
+}
+
+.ion-ios-speedometer-outline:before {
+    content: "\F4AF"
+}
+
+.ion-ios-star:before {
+    content: "\F4B3"
+}
+
+.ion-ios-star-half:before {
+    content: "\F4B1"
+}
+
+.ion-ios-star-outline:before {
+    content: "\F4B2"
+}
+
+.ion-ios-stopwatch:before {
+    content: "\F4B5"
+}
+
+.ion-ios-stopwatch-outline:before {
+    content: "\F4B4"
+}
+
+.ion-ios-sunny:before {
+    content: "\F4B7"
+}
+
+.ion-ios-sunny-outline:before {
+    content: "\F4B6"
+}
+
+.ion-ios-telephone:before {
+    content: "\F4B9"
+}
+
+.ion-ios-telephone-outline:before {
+    content: "\F4B8"
+}
+
+.ion-ios-tennisball:before {
+    content: "\F4BB"
+}
+
+.ion-ios-tennisball-outline:before {
+    content: "\F4BA"
+}
+
+.ion-ios-thunderstorm:before {
+    content: "\F4BD"
+}
+
+.ion-ios-thunderstorm-outline:before {
+    content: "\F4BC"
+}
+
+.ion-ios-time:before {
+    content: "\F4BF"
+}
+
+.ion-ios-time-outline:before {
+    content: "\F4BE"
+}
+
+.ion-ios-timer:before {
+    content: "\F4C1"
+}
+
+.ion-ios-timer-outline:before {
+    content: "\F4C0"
+}
+
+.ion-ios-toggle:before {
+    content: "\F4C3"
+}
+
+.ion-ios-toggle-outline:before {
+    content: "\F4C2"
+}
+
+.ion-ios-trash:before {
+    content: "\F4C5"
+}
+
+.ion-ios-trash-outline:before {
+    content: "\F4C4"
+}
+
+.ion-ios-undo:before {
+    content: "\F4C7"
+}
+
+.ion-ios-undo-outline:before {
+    content: "\F4C6"
+}
+
+.ion-ios-unlocked:before {
+    content: "\F4C9"
+}
+
+.ion-ios-unlocked-outline:before {
+    content: "\F4C8"
+}
+
+.ion-ios-upload:before {
+    content: "\F4CB"
+}
+
+.ion-ios-upload-outline:before {
+    content: "\F4CA"
+}
+
+.ion-ios-videocam:before {
+    content: "\F4CD"
+}
+
+.ion-ios-videocam-outline:before {
+    content: "\F4CC"
+}
+
+.ion-ios-volume-high:before {
+    content: "\F4CE"
+}
+
+.ion-ios-volume-low:before {
+    content: "\F4CF"
+}
+
+.ion-ios-wineglass:before {
+    content: "\F4D1"
+}
+
+.ion-ios-wineglass-outline:before {
+    content: "\F4D0"
+}
+
+.ion-ios-world:before {
+    content: "\F4D3"
+}
+
+.ion-ios-world-outline:before {
+    content: "\F4D2"
+}
+
+.ion-ipad:before {
+    content: "\F1F9"
+}
+
+.ion-iphone:before {
+    content: "\F1FA"
+}
+
+.ion-ipod:before {
+    content: "\F1FB"
+}
+
+.ion-jet:before {
+    content: "\F295"
+}
+
+.ion-key:before {
+    content: "\F296"
+}
+
+.ion-knife:before {
+    content: "\F297"
+}
+
+.ion-laptop:before {
+    content: "\F1FC"
+}
+
+.ion-leaf:before {
+    content: "\F1FD"
+}
+
+.ion-levels:before {
+    content: "\F298"
+}
+
+.ion-lightbulb:before {
+    content: "\F299"
+}
+
+.ion-link:before {
+    content: "\F1FE"
+}
+
+.ion-load-a:before {
+    content: "\F29A"
+}
+
+.ion-load-b:before {
+    content: "\F29B"
+}
+
+.ion-load-c:before {
+    content: "\F29C"
+}
+
+.ion-load-d:before {
+    content: "\F29D"
+}
+
+.ion-location:before {
+    content: "\F1FF"
+}
+
+.ion-lock-combination:before {
+    content: "\F4D4"
+}
+
+.ion-locked:before {
+    content: "\F200"
+}
+
+.ion-log-in:before {
+    content: "\F29E"
+}
+
+.ion-log-out:before {
+    content: "\F29F"
+}
+
+.ion-loop:before {
+    content: "\F201"
+}
+
+.ion-magnet:before {
+    content: "\F2A0"
+}
+
+.ion-male:before {
+    content: "\F2A1"
+}
+
+.ion-man:before {
+    content: "\F202"
+}
+
+.ion-map:before {
+    content: "\F203"
+}
+
+.ion-medkit:before {
+    content: "\F2A2"
+}
+
+.ion-merge:before {
+    content: "\F33F"
+}
+
+.ion-mic-a:before {
+    content: "\F204"
+}
+
+.ion-mic-b:before {
+    content: "\F205"
+}
+
+.ion-mic-c:before {
+    content: "\F206"
+}
+
+.ion-minus:before {
+    content: "\F209"
+}
+
+.ion-minus-circled:before {
+    content: "\F207"
+}
+
+.ion-minus-round:before {
+    content: "\F208"
+}
+
+.ion-model-s:before {
+    content: "\F2C1"
+}
+
+.ion-monitor:before {
+    content: "\F20A"
+}
+
+.ion-more:before {
+    content: "\F20B"
+}
+
+.ion-mouse:before {
+    content: "\F340"
+}
+
+.ion-music-note:before {
+    content: "\F20C"
+}
+
+.ion-navicon:before {
+    content: "\F20E"
+}
+
+.ion-navicon-round:before {
+    content: "\F20D"
+}
+
+.ion-navigate:before {
+    content: "\F2A3"
+}
+
+.ion-network:before {
+    content: "\F341"
+}
+
+.ion-no-smoking:before {
+    content: "\F2C2"
+}
+
+.ion-nuclear:before {
+    content: "\F2A4"
+}
+
+.ion-outlet:before {
+    content: "\F342"
+}
+
+.ion-paintbrush:before {
+    content: "\F4D5"
+}
+
+.ion-paintbucket:before {
+    content: "\F4D6"
+}
+
+.ion-paper-airplane:before {
+    content: "\F2C3"
+}
+
+.ion-paperclip:before {
+    content: "\F20F"
+}
+
+.ion-pause:before {
+    content: "\F210"
+}
+
+.ion-person:before {
+    content: "\F213"
+}
+
+.ion-person-add:before {
+    content: "\F211"
+}
+
+.ion-person-stalker:before {
+    content: "\F212"
+}
+
+.ion-pie-graph:before {
+    content: "\F2A5"
+}
+
+.ion-pin:before {
+    content: "\F2A6"
+}
+
+.ion-pinpoint:before {
+    content: "\F2A7"
+}
+
+.ion-pizza:before {
+    content: "\F2A8"
+}
+
+.ion-plane:before {
+    content: "\F214"
+}
+
+.ion-planet:before {
+    content: "\F343"
+}
+
+.ion-play:before {
+    content: "\F215"
+}
+
+.ion-playstation:before {
+    content: "\F30A"
+}
+
+.ion-plus:before {
+    content: "\F218"
+}
+
+.ion-plus-circled:before {
+    content: "\F216"
+}
+
+.ion-plus-round:before {
+    content: "\F217"
+}
+
+.ion-podium:before {
+    content: "\F344"
+}
+
+.ion-pound:before {
+    content: "\F219"
+}
+
+.ion-power:before {
+    content: "\F2A9"
+}
+
+.ion-pricetag:before {
+    content: "\F2AA"
+}
+
+.ion-pricetags:before {
+    content: "\F2AB"
+}
+
+.ion-printer:before {
+    content: "\F21A"
+}
+
+.ion-pull-request:before {
+    content: "\F345"
+}
+
+.ion-qr-scanner:before {
+    content: "\F346"
+}
+
+.ion-quote:before {
+    content: "\F347"
+}
+
+.ion-radio-waves:before {
+    content: "\F2AC"
+}
+
+.ion-record:before {
+    content: "\F21B"
+}
+
+.ion-refresh:before {
+    content: "\F21C"
+}
+
+.ion-reply:before {
+    content: "\F21E"
+}
+
+.ion-reply-all:before {
+    content: "\F21D"
+}
+
+.ion-ribbon-a:before {
+    content: "\F348"
+}
+
+.ion-ribbon-b:before {
+    content: "\F349"
+}
+
+.ion-sad:before {
+    content: "\F34A"
+}
+
+.ion-sad-outline:before {
+    content: "\F4D7"
+}
+
+.ion-scissors:before {
+    content: "\F34B"
+}
+
+.ion-search:before {
+    content: "\F21F"
+}
+
+.ion-settings:before {
+    content: "\F2AD"
+}
+
+.ion-share:before {
+    content: "\F220"
+}
+
+.ion-shuffle:before {
+    content: "\F221"
+}
+
+.ion-skip-backward:before {
+    content: "\F222"
+}
+
+.ion-skip-forward:before {
+    content: "\F223"
+}
+
+.ion-social-android:before {
+    content: "\F225"
+}
+
+.ion-social-android-outline:before {
+    content: "\F224"
+}
+
+.ion-social-angular:before {
+    content: "\F4D9"
+}
+
+.ion-social-angular-outline:before {
+    content: "\F4D8"
+}
+
+.ion-social-apple:before {
+    content: "\F227"
+}
+
+.ion-social-apple-outline:before {
+    content: "\F226"
+}
+
+.ion-social-bitcoin:before {
+    content: "\F2AF"
+}
+
+.ion-social-bitcoin-outline:before {
+    content: "\F2AE"
+}
+
+.ion-social-buffer:before {
+    content: "\F229"
+}
+
+.ion-social-buffer-outline:before {
+    content: "\F228"
+}
+
+.ion-social-chrome:before {
+    content: "\F4DB"
+}
+
+.ion-social-chrome-outline:before {
+    content: "\F4DA"
+}
+
+.ion-social-codepen:before {
+    content: "\F4DD"
+}
+
+.ion-social-codepen-outline:before {
+    content: "\F4DC"
+}
+
+.ion-social-css3:before {
+    content: "\F4DF"
+}
+
+.ion-social-css3-outline:before {
+    content: "\F4DE"
+}
+
+.ion-social-designernews:before {
+    content: "\F22B"
+}
+
+.ion-social-designernews-outline:before {
+    content: "\F22A"
+}
+
+.ion-social-dribbble:before {
+    content: "\F22D"
+}
+
+.ion-social-dribbble-outline:before {
+    content: "\F22C"
+}
+
+.ion-social-dropbox:before {
+    content: "\F22F"
+}
+
+.ion-social-dropbox-outline:before {
+    content: "\F22E"
+}
+
+.ion-social-euro:before {
+    content: "\F4E1"
+}
+
+.ion-social-euro-outline:before {
+    content: "\F4E0"
+}
+
+.ion-social-facebook:before {
+    content: "\F231"
+}
+
+.ion-social-facebook-outline:before {
+    content: "\F230"
+}
+
+.ion-social-foursquare:before {
+    content: "\F34D"
+}
+
+.ion-social-foursquare-outline:before {
+    content: "\F34C"
+}
+
+.ion-social-freebsd-devil:before {
+    content: "\F2C4"
+}
+
+.ion-social-github:before {
+    content: "\F233"
+}
+
+.ion-social-github-outline:before {
+    content: "\F232"
+}
+
+.ion-social-google:before {
+    content: "\F34F"
+}
+
+.ion-social-google-outline:before {
+    content: "\F34E"
+}
+
+.ion-social-googleplus:before {
+    content: "\F235"
+}
+
+.ion-social-googleplus-outline:before {
+    content: "\F234"
+}
+
+.ion-social-hackernews:before {
+    content: "\F237"
+}
+
+.ion-social-hackernews-outline:before {
+    content: "\F236"
+}
+
+.ion-social-html5:before {
+    content: "\F4E3"
+}
+
+.ion-social-html5-outline:before {
+    content: "\F4E2"
+}
+
+.ion-social-instagram:before {
+    content: "\F351"
+}
+
+.ion-social-instagram-outline:before {
+    content: "\F350"
+}
+
+.ion-social-javascript:before {
+    content: "\F4E5"
+}
+
+.ion-social-javascript-outline:before {
+    content: "\F4E4"
+}
+
+.ion-social-linkedin:before {
+    content: "\F239"
+}
+
+.ion-social-linkedin-outline:before {
+    content: "\F238"
+}
+
+.ion-social-markdown:before {
+    content: "\F4E6"
+}
+
+.ion-social-nodejs:before {
+    content: "\F4E7"
+}
+
+.ion-social-octocat:before {
+    content: "\F4E8"
+}
+
+.ion-social-pinterest:before {
+    content: "\F2B1"
+}
+
+.ion-social-pinterest-outline:before {
+    content: "\F2B0"
+}
+
+.ion-social-python:before {
+    content: "\F4E9"
+}
+
+.ion-social-reddit:before {
+    content: "\F23B"
+}
+
+.ion-social-reddit-outline:before {
+    content: "\F23A"
+}
+
+.ion-social-rss:before {
+    content: "\F23D"
+}
+
+.ion-social-rss-outline:before {
+    content: "\F23C"
+}
+
+.ion-social-sass:before {
+    content: "\F4EA"
+}
+
+.ion-social-skype:before {
+    content: "\F23F"
+}
+
+.ion-social-skype-outline:before {
+    content: "\F23E"
+}
+
+.ion-social-snapchat:before {
+    content: "\F4EC"
+}
+
+.ion-social-snapchat-outline:before {
+    content: "\F4EB"
+}
+
+.ion-social-tumblr:before {
+    content: "\F241"
+}
+
+.ion-social-tumblr-outline:before {
+    content: "\F240"
+}
+
+.ion-social-tux:before {
+    content: "\F2C5"
+}
+
+.ion-social-twitch:before {
+    content: "\F4EE"
+}
+
+.ion-social-twitch-outline:before {
+    content: "\F4ED"
+}
+
+.ion-social-twitter:before {
+    content: "\F243"
+}
+
+.ion-social-twitter-outline:before {
+    content: "\F242"
+}
+
+.ion-social-usd:before {
+    content: "\F353"
+}
+
+.ion-social-usd-outline:before {
+    content: "\F352"
+}
+
+.ion-social-vimeo:before {
+    content: "\F245"
+}
+
+.ion-social-vimeo-outline:before {
+    content: "\F244"
+}
+
+.ion-social-whatsapp:before {
+    content: "\F4F0"
+}
+
+.ion-social-whatsapp-outline:before {
+    content: "\F4EF"
+}
+
+.ion-social-windows:before {
+    content: "\F247"
+}
+
+.ion-social-windows-outline:before {
+    content: "\F246"
+}
+
+.ion-social-wordpress:before {
+    content: "\F249"
+}
+
+.ion-social-wordpress-outline:before {
+    content: "\F248"
+}
+
+.ion-social-yahoo:before {
+    content: "\F24B"
+}
+
+.ion-social-yahoo-outline:before {
+    content: "\F24A"
+}
+
+.ion-social-yen:before {
+    content: "\F4F2"
+}
+
+.ion-social-yen-outline:before {
+    content: "\F4F1"
+}
+
+.ion-social-youtube:before {
+    content: "\F24D"
+}
+
+.ion-social-youtube-outline:before {
+    content: "\F24C"
+}
+
+.ion-soup-can:before {
+    content: "\F4F4"
+}
+
+.ion-soup-can-outline:before {
+    content: "\F4F3"
+}
+
+.ion-speakerphone:before {
+    content: "\F2B2"
+}
+
+.ion-speedometer:before {
+    content: "\F2B3"
+}
+
+.ion-spoon:before {
+    content: "\F2B4"
+}
+
+.ion-star:before {
+    content: "\F24E"
+}
+
+.ion-stats-bars:before {
+    content: "\F2B5"
+}
+
+.ion-steam:before {
+    content: "\F30B"
+}
+
+.ion-stop:before {
+    content: "\F24F"
+}
+
+.ion-thermometer:before {
+    content: "\F2B6"
+}
+
+.ion-thumbsdown:before {
+    content: "\F250"
+}
+
+.ion-thumbsup:before {
+    content: "\F251"
+}
+
+.ion-toggle:before {
+    content: "\F355"
+}
+
+.ion-toggle-filled:before {
+    content: "\F354"
+}
+
+.ion-transgender:before {
+    content: "\F4F5"
+}
+
+.ion-trash-a:before {
+    content: "\F252"
+}
+
+.ion-trash-b:before {
+    content: "\F253"
+}
+
+.ion-trophy:before {
+    content: "\F356"
+}
+
+.ion-tshirt:before {
+    content: "\F4F7"
+}
+
+.ion-tshirt-outline:before {
+    content: "\F4F6"
+}
+
+.ion-umbrella:before {
+    content: "\F2B7"
+}
+
+.ion-university:before {
+    content: "\F357"
+}
+
+.ion-unlocked:before {
+    content: "\F254"
+}
+
+.ion-upload:before {
+    content: "\F255"
+}
+
+.ion-usb:before {
+    content: "\F2B8"
+}
+
+.ion-videocamera:before {
+    content: "\F256"
+}
+
+.ion-volume-high:before {
+    content: "\F257"
+}
+
+.ion-volume-low:before {
+    content: "\F258"
+}
+
+.ion-volume-medium:before {
+    content: "\F259"
+}
+
+.ion-volume-mute:before {
+    content: "\F25A"
+}
+
+.ion-wand:before {
+    content: "\F358"
+}
+
+.ion-waterdrop:before {
+    content: "\F25B"
+}
+
+.ion-wifi:before {
+    content: "\F25C"
+}
+
+.ion-wineglass:before {
+    content: "\F2B9"
+}
+
+.ion-woman:before {
+    content: "\F25D"
+}
+
+.ion-wrench:before {
+    content: "\F2BA"
+}
+
+.ion-xbox:before {
+    content: "\F30C"
+}
+
+@font-face {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/build/c35ad7c76819575781c833319c13711b.eot);
+    src: local("Open Sans"), local("OpenSans"), url(/assets/build/c35ad7c76819575781c833319c13711b.eot?#iefix) format("embedded-opentype"), url(/assets/build/e64cab167bbdc04807429d10873901a0.woff2) format("woff2"), url(/assets/build/ce659615885f33d928eb7fe276574106.woff) format("woff"), url(/assets/build/e45733beda2acdf3a8d7ed9300658475.ttf) format("truetype"), url(/assets/build/7e735d7ae17da9ead1360165b1dc3cfb.svg#OpenSans) format("svg")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        overflow-x: hidden
+    }
+}
+
+body {
+    color: #8da0bc;
+    background-color: crimson;
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    line-height: 1.5625rem;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+.pelicula-view {
+    background: crimson;
+}
+
+li {
+    list-style-type: none
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: crimson;
+}
+
+.header {
+    width: 100%;
+    height: 65px;
+    padding: 5px;
+    background: linear-gradient(to bottom,rgba(220, 20, 60, 0.946) 1%,rgba(220, 20, 60, 0.07) 100%);
+    box-shadow: none;
+    position: fixed;
+    z-index: 9999;
+}
+
+.fx{
+    transition: .2s;
+    background: rgba(220, 20, 60, 0.693);
+}
+
+.header .hd-left {
+    float: left
+}
+
+.header .hd-left .bmenu {
+    float: left;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    color: #fff
+}
+
+.header .hd-logo {
+    width: 195px;
+    float: left;
+    padding: 5px
+}
+
+.header .hd-logo img {
+    width: 100%
+}
+
+.header .hd-right {
+    float: right;
+    padding: 15px 5px
+}
+
+.header .hd-right .hd-menu {
+    float: left;
+    margin-top: 3px
+}
+
+.header .hd-right .hd-search {
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    margin-top: -4px
+}
+
+.header .hd-right .hd-search input {
+    border: none;
+    width: 280px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 4px;
+    padding-right: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    background: #ffffff2b;
+    color: #fff;
+}
+
+.header .hd-right .hd-search .icon {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    text-align: center;
+    font-size: 19px;
+    background-color: #02061587;
+    color: #fff;
+    border-radius: 0 4px 4px 0
+}
+
+.header .hd-right .hd-search .icon i {
+    position: relative;
+    top: 5px
+}
+
+.header .hd-right .hd-menu li {
+    float: left;
+    color: #fff;
+    margin-right: 20px
+}
+
+.header .hd-right .hd-menu li:last-child {
+    margin-right: 0
+}
+
+.header .hd-right .hd-menu li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.menumobile {
+    width: 100%;
+    position: fixed;
+    top: 65px;
+    bottom: 0;
+    display: none;
+    z-index: 10;
+    padding: 25px 20px;
+    background-color:crimson;
+}
+
+.menumobile h2 {
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 10px
+}
+
+.menumobile a {
+    text-decoration: none
+}
+
+.menumobile .hd-menu {
+    width: 100%
+}
+
+.menumobile i {
+    font-size: 20px
+}
+
+.menumobile .hd-menu li {
+    width: 100%
+}
+
+.menumobile .hd-menu .li-active a {
+    background-color: rgba(0, 0, 0, .25);
+    color: #fff;
+    border-radius: 5px
+}
+
+.menumobile .hd-menu .li-active a i {
+    color: coral
+}
+
+.menumobile .hd-menu li:hover a {
+    color: #fff
+}
+
+.menumobile .hd-menu li:hover a i {
+    color: coral
+}
+
+.menumobile .hd-menu li a {
+    color: hsla(0, 0%, 100%, .5);
+    padding: 7px 0
+}
+
+.menumobile .hd-menu li a i {
+    margin-right: 8px;
+    margin-left: 3px
+}
+
+.menumobile .genres {
+    margin-top: 15px
+}
+
+.menumobile li a {
+    display: block;
+    color: #fff
+}
+
+.results {
+    width: 100%;
+    position: fixed;
+    top: 65px;
+    height: 100%;
+    background-color: transparent;
+    color: #fff;
+    display: none;
+    z-index: 2;
+    padding: 20px
+}
+
+.results .search-mobile {
+    display: none;
+    width: 100%;
+    position: relative
+}
+
+.results .search-mobile input {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid #252525;
+    border-radius: 0;
+    padding: 25px 25px 25px 48px;
+    color: #fff;
+    font-size: 22px
+}
+
+.results .search-mobile .icon {
+    position: absolute;
+    top: 0;
+    color: #fff;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 52px
+}
+
+.results .closeresults {
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer
+}
+
+.main,
+.results .closeresults i {
+    
+}
+
+.main {
+    width: 100%;
+    background-color: crimson;
+}
+
+.main .main-left {
+    width: 235px;
+    float: left;
+    padding: 20px;
+    min-height: 300px;
+    height: auto
+}
+
+.main .main-left h2 {
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 15px
+}
+
+.main .main-left .genres {
+    margin-bottom: 0;
+    height: 368px;
+    overflow: hidden;
+    position: relative
+}
+
+.main .main-left .genre-more {
+    float: right;
+    margin-bottom: 15px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 5px;
+    cursor: pointer
+}
+
+.coming-soon {
+    width: 100%;
+    background-color: #063046;
+    border: 0;
+    min-height: 0 !important;
+    padding: 20px
+}
+
+.title-detail {
+    margin-bottom: 1px
+}
+
+.title-detail h2 {
+    color: #fff;
+    font-size: 18px;
+    float: left
+}
+
+.title-detail span.more {
+    float: right;
+    color: #a2b2cc;
+    font-size: 15px;
+    font-weight: 700
+}
+
+.title-detail span.more a {
+    color: #3c8eeb
+}
+
+.coming-soon .coming-soon-movies {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0 20px
+}
+
+.coming-soon .coming-soon-movies .item-pelicula {
+    margin-right: .4%;
+    margin-left: .4%
+}
+
+.genres {
+    margin-bottom: 15px
+}
+
+.main .movie-refresh {
+    margin-top: 20px
+}
+
+.genressomb:before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 16px;
+    background: linear-gradient(180deg, rgba(40, 40, 40, 0) 0, #011b29);
+    bottom: 0
+}
+
+.genres ul li a {
+    color: hsla(0, 0%, 100%, .5);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    padding-bottom: 4px;
+    font-size: 13px
+}
+
+.menumobile .genres ul {
+    overflow-y: scroll;
+    height: 277px;
+    padding-right: 7px
+}
+
+.menumobile .genres ul::-webkit-scrollbar {
+    width: 3px;
+    margin-left: 10px
+}
+
+.menumobile .genres ul::-webkit-scrollbar-track {
+    display: none;
+    -webkit-box-shadow: inset 0 0 6px transparent;
+    border-radius: 10px
+}
+
+.menumobile .genres ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(220, 20, 60, 0.514)
+}
+
+.menumobile .genres ul li a {
+    padding-bottom: 8px;
+    padding-top: 4px;
+    font-size: 15px
+}
+
+.genres ul li:hover a {
+    color: #fff
+}
+
+.genres ul li:hover a i {
+    color: crimson
+}
+
+.genres ul li:hover .cant-genre {
+    color: #ccc
+}
+
+.genres ul li .cant-genre {
+    float: right;
+    color: #afafaf;
+    font-size: 15px
+}
+
+.genres ul li i,
+.years ul li {
+    margin-right: 8px
+}
+
+.years ul li {
+    float: left;
+    margin-bottom: 15px
+}
+
+.years ul a {
+    padding: 5px 13px;
+    background-color: rgba(0, 0, 0, .25);
+    color: hsla(0, 0%, 100%, .5);
+    font-size: 13px;
+    border-radius: 5px;
+    text-decoration: none
+}
+
+.years ul a:hover {
+    background-color: #000;
+    color: #fff
+}
+
+.main .main-right {
+    width: calc(100% - 235px);
+    float: left;
+    padding: 20px;
+    border-left: 1px solid #2b2b2b
+}
+
+.main .main-right .main-estrenos,
+.main .main-right .main-peliculas {
+    width: 100%
+}
+
+.main .main-right .title-detail {
+    margin-bottom: 15px
+}
+
+.main .main-right h2 {
+    color: #fff;
+    font-size: 18px;
+    float: left
+}
+
+.main .main-right .more {
+    float: right;
+    color: #a2b2cc;
+    font-size: 15px;
+    font-weight: 700
+}
+
+.main .main-right .more a {
+    color: #298eea;
+    text-decoration: none
+}
+
+.main .main-right .items-peliculas {
+    width: 100%
+}
+
+.item-pelicula {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 13px;
+    position: relative;
+    
+
+
+    
+}
+
+.item-pelicula figure{
+
+    position: relative;
+}
+
+.item-pelicula .YearPosition {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    z-index: 3;
+    font-size: 0.70rem;
+    font-weight: 700;
+    background-color: #080f28d4;
+    padding: 0 .5rem;
+    line-height: 1.2rem;
+    border-radius: 1rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin-left: 150px; */
+    margin-bottom: 9px;
+    bottom: 0;
+    /* left: 0; */
+}
+
+
+.item-pelicula figure:before {
+    content: '\f04b';
+    font-family: 'font awesome 5 free';
+    font-weight: 900;
+    font-style: normal;
+    width: 3.75rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    text-align: center;
+    border: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 3;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    display: none;
+    color: #fff;
+    animation-name: zoomIn;
+    animation-duration: .2s;
+    animation-fill-mode: both;
+}
+
+.item-pelicula:hover figure:before{
+
+    display: block;
+}
+.item-pelicula:hover  figure>img{
+    opacity: .5;
+}
+
+
+
+
+/*
+.main-results .item-peliculas,
+.main-results .items-peliculas,
+.main-results .items-series {
+    width: 100%
+}
+*/
+.main-results{
+    overflow: auto;
+    max-height: 80vh;
+}
+
+.main-results .item-pelicula:hover div.year {
+    background-color: #2d637b;
+    transition: background-color .3s
+}
+
+.main-results .item-pelicula:nth-child(6n+0) {
+    margin-right: 0
+}
+
+.main-results .item-pelicula figure {
+    margin-bottom: 2px;
+    position: relative
+}
+
+.main-results .item-pelicula figure div.year {
+    background-color: #0c151b;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 2px 4px
+}
+
+.main-results .item-pelicula figure div.year span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff
+}
+
+.main-results .item-pelicula p {
+    white-space: normal;
+    color: #fff;
+    vertical-align: middle;
+    height: 29px;
+    line-height: 14px;
+    margin: auto;
+    text-align: center
+}
+
+.main-results .title-results {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: hsla(0, 3%, 74%, .8);
+    font-size: 16px;
+    border-bottom: 1px solid rgba(80, 80, 80, .7);
+    width: 100%;
+    padding-bottom: 1px
+}
+
+.main .main-right .main-estrenos .item-pelicula {
+    margin-left: .2%;
+    margin-right: .2%
+}
+
+.item-pelicula figure {
+    width: 100%;
+    padding-top: 143.33333333333334%;
+   /* background: #0b151b url(/assets/build/bae2d6799c9b32f3a648a70681317cc4.png) no-repeat 50%; */
+    box-shadow: 0 0 5px #080f2800;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.item-pelicula figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.item-pelicula figure .ribbon {
+    width: 100%;
+    background-color: #238b23;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.movie-estreno {
+    height: 291px;
+}
+
+.item-pelicula figure .ribbon span {
+    color: #fff;
+    display: block;
+    font: 700 90% Open Sans, sans-serif;
+    padding: 4px 5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 5px #444;
+    letter-spacing: .06em
+}
+
+.item-pelicula a {
+    text-decoration: none
+}
+
+.item-pelicula .quality {
+    position: absolute;
+    top: 0;
+    padding: 0 3px;
+    background-color: #dc1313;
+    margin-left: 8px;
+    margin-top: 6px
+}
+
+.item-pelicula p {
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.item-pelicula span {
+    font-size: 11px;
+    color: #777
+}
+
+
+
+.item-pelicula:hover img {
+    border-color: #a5a3a3
+}
+
+.item-pelicula img {
+    width: 100%;
+    border: 2px solid transparent;
+    transition: border .3s
+}
+
+.main-slider {
+    width: 100%
+}
+
+.main-slider .item-slider {
+    float: left;
+    width: 48%;
+    position: relative
+}
+
+.main-slider .item-slider .info-slider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    height: 55px;
+    padding-left: 12px;
+    padding-top: 7px
+}
+
+.main-slider .item-slider .info-slider .title-slider {
+    color: #fff;
+    font-weight: 700
+}
+
+.main-slider .item-slider .info-slider .year-slider {
+    color: #d0caca;
+    font-size: 13px
+}
+
+.main-slider .item-slider img {
+    width: 100%
+}
+
+.slick-dots li {
+    width: 10px !important;
+    height: 5px !important
+}
+
+.slick-dots .slick-active button {
+    background-color: crimson !important
+}
+
+.slick-dots li button {
+    width: 10px !important;
+    height: 5px !important;
+    padding: 3px !important;
+    background-color: #00466a !important
+}
+
+.slick-arrow:before {
+    display: none !important
+}
+
+.slick-next,
+.slick-prev {
+    font-size: 45px;
+    top: 40%;
+    width: 27px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    z-index: 1;
+    opacity: .5
+}
+
+.main-estrenos .slick-prev {
+    width: 20px;
+    left: -18px
+}
+
+.main-estrenos .slick-next {
+    width: 20px;
+    right: -18px
+}
+
+.slick-next:hover,
+.slick-prev:hover {
+    color: #fff
+}
+
+.main {
+    min-height: 650px
+}
+
+.main .pelicula-view {
+    padding: 25px
+}
+
+.main .pelicula-info {
+    width: 100%
+}
+
+.main .pelicula-info .pi-left {
+    width: 180px;
+    float: left;
+    margin-right: 20px
+}
+
+.main .pelicula-info .pi-left .poster {
+    width: 100%;
+    position: relative
+}
+
+.main .pelicula-info .pi-left .poster .ribbon {
+    width: 100%;
+    background-color: #238b23;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.main .pelicula-info .pi-left .poster .ribbon span {
+    color: #fff;
+    display: block;
+    font: 700 90% Open Sans, sans-serif;
+    padding: 4px 5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 5px #444;
+    letter-spacing: .06em
+}
+
+.trailer {
+    width: 100%;
+    background-color: #1e274770;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    height: 36px;
+    color:#fff;
+    font-size: 11px;
+    z-index: 2;
+    background-image: radial-gradient(circle, #007aff9e, #0060c98c, #024084a3, #042854b0, #0519379e);
+   
+}
+
+.trailer:hover {
+    background-color: #007aff;
+    color:#fff;
+    background-image: radial-gradient(circle, #007aff, #0060c9, #024084, #042854, #051937);
+}
+
+.trailer p {
+    line-height: 36px
+}
+
+.trailer p i {
+    font-size: 22px;
+    vertical-align: middle;
+    margin-right: 2px
+}
+
+.main .pelicula-info .pi-left .poster img {
+    width: 100%
+}
+
+.main .pelicula-info .pi-right {
+    float: left;
+    width: calc(100% - 200px);
+    color: #528fa0
+}
+
+.info-content {
+    font-size: 13px
+}
+
+.main .pelicula-info .pi-right .info-content h1 {
+    color: #46bf17;
+    font-size: 22px;
+    margin-bottom: 10px
+}
+
+.main .pelicula-info .pi-right .info-content p {
+    margin-bottom: 10px
+}
+
+.main .pelicula-info .pi-right .info-content .content-type {
+    color: #fff;
+    font-weight: 700
+}
+
+.main .pelicula-info .pi-right .info-content .sinopsis {
+    display: block;
+    margin-top: 5px
+}
+
+.main .pelicula-info .pi-right .info-content .genre a {
+    color: #528fa0;
+    text-decoration: none
+}
+
+.main .pelicula-info .pi-right .info-content .info-half {
+    float: left;
+    width: 50%
+}
+
+.share-media p {
+    float: left;
+    margin-bottom: 0;
+    margin-top: 5px
+}
+
+.share-media .social-media {
+    float: left;
+    margin-left: 15px
+}
+
+.share-media .social-media .sm {
+    float: left;
+    margin-right: 12px;
+    width: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 23px;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.share-media .social-media .fb {
+    background-color: #445998
+}
+
+.share-media .social-media .twt {
+    background-color: #58abed
+}
+
+.share-media .social-media .wtp {
+    background-color: #3cab35;
+    display: none
+}
+
+.share-media .social-media .ggp {
+    background-color: #d05945
+}
+
+.share-media .url {
+    width: 250px;
+    float: left
+}
+
+.share-media .url input {
+    padding: 7px 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    border: 1px solid #0d4269;
+    color: #fff
+}
+
+.main .pelicula-player {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px
+}
+
+.main .pelicula-player .player {
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+    padding: 0
+}
+
+.main .pelicula-player .title-player {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px
+}
+
+.main .pelicula-player .player .video {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 100px;
+    /*padding: 2px;*/
+    background: rgba(220, 20, 60, 0.452));
+    position: relative
+}
+
+.main .pelicula-player .player .video-html {
+    height: 400px;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.main .pelicula-player .player .video-html iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main .pelicula-player .player .video #coverGallery {
+    width: 100%;
+    opacity: 0
+}
+
+.main .pelicula-player .player .video .loader {
+    position: absolute;
+    top: 40%;
+    left: 50%
+}
+
+.main .pelicula-player .player .tabs-video,
+.main .pelicula-player .player .tabs-video ul {
+    width: 100%
+}
+
+.main .pelicula-player .player .tabs-video ul .tab-video {
+    float: left;
+    background-color: rgba(220, 20, 60, 0.555);
+    transition: background-color .3s
+}
+
+.main .pelicula-player .player .tabs-video ul .tab-video:hover {
+    background-color: coral;
+}
+
+.main .pelicula-player .player .tabs-video ul .tab-active {
+    background-color: coral;
+}
+
+.main .pelicula-player .player .tabs-video ul .tab-active:hover {
+    background-color: rgba(255, 127, 80, 0.527)!important
+}
+
+.main .pelicula-player .player .tabs-video ul .tab-video a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    padding: 4px 20px;
+    cursor: pointer;
+    font-size: 15px
+}
+
+.main .related {
+    width: 100%;
+    margin-top: 20px
+}
+
+.main .related .title-related {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px
+}
+
+.main .related .list-related,
+.main .related .list-related ul {
+    width: 100%
+}
+
+.main .related .list-related ul li {
+    float: left;
+    margin-right: 1%;
+    margin-left: 1%
+}
+
+.main .related .list-related ul .last {
+    margin-right: 0
+}
+
+.main .related .list-related ul li img {
+    width: 100%
+}
+
+.main .related .list-related ul li .ribbon {
+    width: 100%;
+    background-color: #238b23;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.main .related .list-related ul li .ribbon span {
+    color: #fff;
+    display: block;
+    font: 700 90% Open Sans, sans-serif;
+    padding: 4px 5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 5px #444;
+    letter-spacing: .06em
+}
+
+.main .related .list-related ul li .title-rmovie {
+    text-align: center;
+    color: #d2d1d1;
+    font-size: 13px;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10
+}
+
+.modal .content-modal {
+    width: 560px;
+    height: 315px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    margin: auto
+}
+
+.modal .content-modal .closemodal {
+    cursor: pointer;
+    background: #303652;
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 100%;
+    box-shadow: 1px 1px 3px #000
+}
+
+.footer {
+    background-color: crimson;
+    height: 60px;
+    padding: 14px 20px
+}
+
+.footer,
+.footer .content-footer {
+    width: 100%
+}
+
+.footer .content-footer .ft-left {
+    float: left
+}
+
+.footer .content-footer .ft-left img {
+    width: 155px;
+    margin-top: -1px
+}
+
+.footer .content-footer .ft-right {
+    float: right;
+    margin-top: 9px
+}
+
+.footer .content-footer .ft-right a {
+    color: #fff;
+    text-decoration: none
+}
+
+.block {
+    display: block
+}
+
+.blur {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px)
+}
+
+.clear {
+    clear: both
+}
+
+.hidden {
+    display: none
+}
+
+a {
+    text-decoration: none
+}
+
+.butmore {
+    text-align: center;
+    padding: 12px;
+    background: #161a27;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 700;
+    height: 40px
+}
+
+.butmore img,.hidden{
+    display: none
+}
+
+.butmore.loading {
+    font-size: 0
+}
+
+.butmore.loading img {
+    display: block;
+    margin: -2px auto 0;
+    height: 20px
+}
+
+.message {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    background: hsla(0, 0%, 100%, .3);
+    color: #fff;
+    border: 0
+}
+
+.message img {
+    width: 30px
+}
+
+.warn-hd {
+    max-width: 620px;
+    padding-top: 1px
+}
+
+.warn-hd img {
+    position: relative;
+    bottom: -6.5px
+}
+
+.warning {
+    background: #d8d89f;
+    border: 1px solid #dab767;
+    color: #1c1e23
+}
+
+.movie-warning {
+    position: relative;
+    bottom: -25px
+}
+
+.movie-warning .warning {
+    margin: 0 auto
+}
+
+.moreestrenos {
+    text-align: center;
+    display: block;
+    padding: 12px;
+    margin: 0 auto;
+    width: 235px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: #031119;
+    font-size: 14px
+}
+
+.custom-nav1{
+    display:block;
+}
+
+@media (max-width: 1050px) {
+    .main .pelicula-player .player {
+        max-height: none;
+        padding: 0
+    }
+}
+
+@media (max-width: 850px) {
+    .header .hd-right .hd-menu {
+        display: none
+    }
+
+    .header .hd-left .bmenu {
+        display: block
+    }
+
+    .main .main-left {
+        display: none
+    }
+
+    .main .main-right {
+        width: 100%
+    }
+
+    .genressomb:before {
+        display: none
+    }
+    .custom-nav1{
+        display:none;
+    }
+
+    .right-t{
+        display:none;
+    }
+
+    .left-t{
+        display:none;
+    }
+
+    .iframevideo{
+        display: none;
+    }
+
+    .button-sound{
+        display:none;
+    }
+
+    .title-detail span.more {
+        float: right !important;
+        color: #a2b2cc !important;
+        font-size: 15px !important;
+        font-weight: 700 !important
+    }
+    
+    .title-detail span.more a {
+        color: #3c8eeb !important
+    }
+    
+    
+}
+
+
+
+
+@media (min-width: 850px) {
+    .menumobile {
+        display: none !important
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .header .hd-logo img {
+        margin-top: 12px
+    }
+}
+
+@media (max-width: 650px) {
+    .header .hd-logo {
+        width: 160px;
+        float: none;
+        margin: 0 auto
+    }
+
+    .header .hd-logo img {
+        margin-top: 8px
+    }
+
+    .header .hd-right .hd-search input {
+        display: none
+    }
+
+    .header .hd-right .hd-search .icon {
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 26px;
+        position: static
+    }
+
+    .header .hd-right .hd-search .icon i {
+        top: 0;
+        right: 0
+    }
+
+    .main .pelicula-info .pi-left {
+        float: none;
+        margin: 0 auto
+    }
+
+    .trailer {
+        display: none
+    }
+
+    .main .pelicula-info .pi-right {
+        float: none;
+        width: 100%;
+        margin-top: 15px
+    }
+
+    .main .pelicula-info .pi-right .info-content .share-media .url {
+        float: none;
+        width: 100%
+    }
+
+    .main .pelicula-info .pi-right .info-content .share-media .url input {
+        margin-top: 15px
+    }
+
+    .results .closeresults {
+        display: none
+    }
+
+    .results .search-mobile {
+        display: block;
+        margin-bottom: 20px
+    }
+
+    .share-media .social-media .wtp {
+        display: block
+    }
+
+    .modal .content-modal {
+        width: 100% !important;
+        height: 315px !important
+    }
+
+    .modal .content-modal .closemodal {
+        right: 3px;
+        width: 30px;
+        line-height: 31px;
+        font-size: 16px
+    }
+
+    .modal .content-modal .video-modal {
+        width: 100%;
+        height: 100%
+    }
+
+    .modal .content-modal .video-modal .iframevideo {
+        width: 100% !important;
+        height: 100% !important
+    }
+}
+
+
+
+@media (min-width: 651px) and (max-width: 850px) {
+    
+    .movie-estreno {
+        height: 263px;
+    }
+    
+}
+
+
+
+@media (min-width: 350px) and (max-width: 650px) {
+    .header .hd-left .hd-logo {
+        margin-top: 6px;
+        width: 160px
+    }
+
+    .movie-estreno {
+        height: 235px;
+    }
+}
+
+
+
+@media (min-width: 300px) and (max-width: 350px) {
+    .header .hd-logo {
+        width: 145px
+    }
+
+    .ribbon span {
+        font-size: 70% !important
+    }
+}
+
+@media (max-width: 300px) {
+    .header .hd-logo {
+        width: 145px
+    }
+
+    .header .hd-left .bmenu {
+        font-size: 35px;
+        padding: 11px
+    }
+
+    .header .hd-right .hd-search .icon {
+        font-size: 23px
+    }
+}
+
+@media (max-width: 356px) {
+    .footer .content-footer .ft-left img {
+        width: 103px;
+        margin-top: 5px
+    }
+}
+
+@media (max-width: 305px) {
+    .footer .content-footer .ft-right {
+        font-size: 14px
+    }
+}
+
+@media (min-width: 650px) and (max-width: 850px) {
+    .main .pelicula-player .player .tabs-video ul .tab-video a {
+        padding: 12px 15px;
+        font-size: 13px
+    }
+}
+
+@media (min-width: 500px) and (max-width: 650px) {
+    .main .pelicula-player .player .tabs-video ul .tab-video a {
+        padding: 8px;
+        font-size: 12px
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .main .pelicula-player .player .tabs-video ul .tab-video a {
+        padding: 8px 10px;
+        font-size: 12px
+    }
+}
+
+/*@media (max-width: 650px) {
+    .video-html {
+        top: 5px !important;
+        left: 5px !important;
+        right: 5px !important;
+        bottom: 5px !important
+    }
+
+    .video-html iframe {
+        width: 100% !important;
+        height: 100% !important
+    }
+}
+*/
+@media (max-width: 400px) {
+    .main .pelicula-player .player .tabs-video ul .tab-video a {
+        padding: 6px 5px;
+        font-size: 12px
+    }
+}
+
+@media (max-width: 553px) {
+    .warn-hd {
+        padding-top: 7px
+    }
+}
+
+.title-error {
+    width: 100%;
+    max-width: 450px;
+    min-height: 105px;
+    background: #061b25;
+    margin: -5px auto 50px;
+    padding: 15px;
+    border: 1px solid #083b50;
+    text-align: center;
+    font-size: 16px
+}
+
+#error-redirect {
+    color: #fff;
+    border: 1px solid #1d7dff;
+    background: #1f59ff;
+    padding: 7px 15px;
+    font-size: 16px;
+    border-radius: 4px
+}
+
+.premiere-series {
+    min-height: 100px
+}
+
+.premiere-series .item-serie {
+    position: relative;
+    height: 100%
+}
+
+.premiere-series .slick-arrow {
+    top: 47% !important
+}
+
+.premiere-series .slick-prev {
+    left: 5px !important
+}
+
+.premiere-series .slick-next {
+    right: 4px !important
+}
+
+.premiere-series img {
+    width: 100%
+}
+
+.premiere-series .shadow-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    min-height: 50px;
+    background: rgba(0, 0, 0, .7);
+    color: #fff;
+    padding: 10px 20px
+}
+
+.premiere-series .shadow-title p {
+    font-size: 12px
+}
+
+.item-season {
+    width: 100%;
+    min-height: 30px;
+    font-size: 15px
+}
+
+.item-season:hover>.item-season-title {
+    background: #00466a
+}
+
+.item-season.open .ion-chevron-up {
+    display: inline-block !important
+}
+
+.item-season.open .ion-chevron-down {
+    display: none
+}
+
+.item-season.open .item-season-episodes {
+    display: block
+}
+
+.item-season>.item-season-title {
+    font-weight: 700;
+    background: #0a2d41;
+    padding: 10px;
+    border-bottom: 1px solid #06222c;
+    cursor: pointer;
+    transition: background .3s
+}
+
+.item-season>.item-season-title .ion-chevron-up {
+    display: none
+}
+
+.item-season .arrow {
+    margin-right: 8px
+}
+
+.item-season .item-season-episodes {
+    display: none;
+    border-left: 1px solid #0a2d41;
+    border-right: 1px solid #0a2d41
+}
+
+.item-season .item-season-episodes a {
+    display: block;
+    padding: 2px 15px 10px;
+    border-bottom: 1px solid #0a2d41;
+    font-size: 13px;
+    color: #fff
+}
+
+.item-season .item-season-episodes a:hover {
+    background: #052437
+}
+
+.i-play {
+    color: #46bf17;
+    font-size: 22px;
+    right: 5px;
+    position: relative;
+    bottom: -3px
+}
+
+.btn {
+    display: inline-block;
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 20px;
+    color: #fff;
+    background: crimson;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    border: 0;
+    cursor: pointer
+}
+
+.btn i {
+    font-size: 22px
+}
+
+.btn[disabled] {
+    opacity: .5
+}
+
+.arrows {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin-top: 20px
+}
+
+.arrows .index {
+    margin: 0 auto;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%
+}
+
+.arrows .prev {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    padding: 0 20px 0 30px
+}
+
+.arrows .prev i {
+    position: absolute;
+    left: 15px;
+    top: 0
+}
+
+.arrows .next {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    padding: 0 30px 0 20px
+}
+
+.arrows .next i {
+    position: absolute;
+    right: 15px;
+    top: 0
+}
+
+@media (max-width: 420px) {
+    .arrows .btn {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 100%;
+        padding: 0
+    }
+
+    .arrows .btn span {
+        display: none !important
+    }
+}
+
+.destacado {
+    position: relative;
+    padding: 4.8rem .8rem 1.3rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+    height: 80vh;
+    min-height: 10rem;
+    width: 100%;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .destacado {
+        height: 80vh;
+    }
+}
+
+.destacado-info {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+@media screen and (min-width: 640px) {
+    .destacado-info {
+        margin: 5rem 0;
+        
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .destacado-info {
+        margin: 6rem 0rem 4rem;
+        width: 50%;
+
+    }
+}
+
+
+
+
+.destacado-info h2 {
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+@media screen and (min-width: 640px) {
+    .destacado-info h2 {
+        font-size: 2rem;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    .destacado-info h2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .destacado-info p {
+        font-size: 1.1rem;
+    }
+}
+
+.destacado-overlay img {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+
+.destacado-overlayColor {
+    background: linear-gradient(to bottom,rgba(220, 20, 60, 0.371) 0%,crimson 100%);  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
+.movie-info .destacado-overlayColor{
+    z-index: 1;
+}
+
+.destacado .play-link {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.destacado .play-link:hover {
+    color: #ffffff;
+}
+
+.movie-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.movie-info__container {
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    padding: 7rem 1.5rem 2rem 1.5rem;
+}
+
+
+
+.movie-info__poster {
+    width: 100%;
+}
+
+.card-tvshow {
+    height: 100%;
+    position: relative;
+}
+
+.card-tvshow__image {
+    position: relative;
+    padding-top: 143.33333333333334%;
+    overflow: inherit;
+}
+
+.card-tvshow__image figure {
+    margin: 0;
+}
+
+.card-tvshow__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.card-tvshow__image--border {
+    border: 5px solid #fff;
+}
+
+@media (min-width: 992px) {
+    .movie-info__details {
+        width: 70%;
+    }
+}
+
+.movie-info__details {
+    width: 100%;
+}
+
+.movie-info__poster {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+
+    .movie-info__poster {
+        width: 20%;
+    }
+
+}
+
+
+
+
+.mg-b-8,
+.mg-y-8 {
+    margin-bottom: .5rem !important;
+}
+
+.movie-info .page-description {
+    max-height: 150px;
+    overflow-x: auto;
+}
+
+.card-full__cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .65;
+    object-fit: cover;
+}
+
+.movie-info .card-full__cover {
+    opacity: 1;
+}
+
+.tags-genres {
+    display: flex;
+}
+
+.tags-genres__item {
+    padding: 2px 6px;
+    border-radius: 5px;
+    margin-right: 8px;
+    color: #fff;
+    border: 1px solid #f5b50a;
+    font-size: .875rem;
+}
+
+
+
+.movie-info:after {
+    background: linear-gradient(to bottom,rgba(220, 20, 60, 0.46) 0%,crimson 100%);
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    pointer-events: none;
+
+}
+
+@media (min-width: 992px) {
+    .movie-info__container {
+        flex-direction: row;
+    }
+
+}
+
+
+
+@media (min-width: 992px) {
+    .movie-info__container {
+        flex-direction: row;
+    }
+
+}
+
+.mg-r-16,
+.mg-x-16 {
+    margin-right: 1rem !important;
+}
+
+.h5,
+h5 {
+    font-size: 1.25rem;
+}
+
+
+.page-description--small {
+    font-size: 13px;
+    color: #eee;
+
+}
+.page-description--small p{
+    margin: 0;
+}
+
+.color-titles{
+    color: #fff;
+}
+
+
+.generos-menu{
+    position: absolute;
+    top: 55px;
+    z-index: 1;
+    background: rgb(201, 40, 72);
+    padding: 16px 20px;
+    max-width: 39%;
+    min-width: 300px;
+    max-height: 250px;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    z-index: 5;
+    
+}
+
+
+.video{
+
+    border-radius: 15px;
+}
+
+.tab-video {
+    border-radius: 15px;
+}
+
+#video-content {
+
+    border-radius: 15px;
+}
+
+.generos-menu li{
+    margin: 0 !important;
+}
+.generos-menu li a {
+    width: 100%;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    padding: 1rem;
+}
+.generos-menu li a:hover{
+    background-color: rgba(0,0,0,.3);
+    color: coral !important;
+}
+
+@media (max-width: 768px){
+
+    .generos-menu{
+        position: relative;
+        max-width: 100%;
+        top: 0px;
+        min-width: 300px;
+        max-height: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: grid;
+        grid-gap: 3px;
+
+        
+    }
+
+
+
+}
+
+
+.js-generos{
+    cursor: pointer;
+}
+
+.style-scroll::-webkit-scrollbar {
+    width: 12px;     /* TamaÃ±o del scroll en vertical */
+    height: 12px;    /* TamaÃ±o del scroll en horizontal */
+   /* display: none; */ /* Ocultar scroll */
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.style-scroll::-webkit-scrollbar-thumb {
+    background: rgb(53, 53, 53);
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando estÃ© en hover */
+.style-scroll::-webkit-scrollbar-thumb:hover {
+    background: #313131;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando estÃ© en active */
+.style-scroll::-webkit-scrollbar-thumb:active {
+    background-color: #313131;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.style-scroll::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando estÃ© en active o hover */
+.style-scroll::-webkit-scrollbar-track:hover,
+.style-scroll::-webkit-scrollbar-track:active {
+  background: #1a1a1a;
+}
+
+.bg-primary{
+    background: #171a26c7;
+}
+.page-description p{
+    margin: 0;
+}
+
+
+.select-season {
+    margin-bottom: 2.5rem;
+}
+.select-season>span {
+    float: left;
+    padding: .5rem 1.5rem .5rem 1.25rem;
+    border-radius: 3px;
+    background-color: #141a32;
+    color: #4f6b95;
+    margin-right: -.5rem;
+    line-height: calc(2rem - 2px);
+}
+
+.select-season>select {
+    float: left;
+    width: auto;
+    border-radius: 3px;
+    background-color: #1e2747;
+    border: 0;
+    font-size: 1rem;
+}
+.select-season:after {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    content: '';
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('../assets/descarga.svg');
+    background-position: right 1rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    padding-right: 3rem !important;
+}
+
+
+ textarea, select {
+    border: 1px solid #1e2747;
+    background-color: #1e2747;
+    color: #8da0bc;
+}
+
+
+textarea, select {
+    display: block;
+    padding: .5rem 1.5rem;
+    width: 100%;
+    line-height: calc(2rem - 2px);
+    border-radius: 3rem;
+}
+
+button, select, textarea {
+    transition: .2s;
+}
+
+
+.MovieList.Rows{
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.MovieList.Rows>li{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 2rem;
+}
+
+.TPost.C .Image {
+    position: relative;
+}
+
+.TPost.C .Image figure {
+    background-color: #000;
+}
+
+.TPost .Image figure {
+    position: relative;
+    background-color: crimson;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+
+.TPost .Image figure:before {
+    content: '\f04b';
+    font-family: 'font awesome 5 free';
+    font-weight: 900;
+    font-style: normal;
+    width: 3.75rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    text-align: center;
+    border: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    display: none;
+    color: #fff;
+    animation-name: zoomIn;
+    animation-duration: .2s;
+    animation-fill-mode: both;
+}
+
+.TPost.C .Image figure:before {
+    z-index: 3;
+}
+.TPost:hover .Image figure:before {
+    display: block;
+}
+
+
+.TPost .Image figure>img, .backdrop>.Image img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+}
+
+.TPost:hover .Image figure>img {
+    opacity: .5;
+}
+
+.TPost.C .Image img {
+    z-index: 2;
+}
+
+
+.episodes .Image figure:after {
+    padding-top: 56%;
+    content: '';
+    width: 1px;
+    display: block;
+    border-radius: 5px;
+}
+
+.TPost.C .Title {
+    font-size: .875rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding-top: .5rem;
+    font-weight: 400;
+}
+
+
+.Year {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    z-index: 3;
+    font-size: .75rem;
+    font-weight: 700;
+    background-color: #007aff;
+    padding: 0 .5rem;
+    line-height: 1.2rem;
+    border-radius: 1rem;
+    color: #fff;
+}
+
+@media (min-width: 768px){
+    .MovieList.Rows>li, .frm-cols>.col {
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    }
+}
+
+@media (min-width: 992px){
+
+    .MovieList.Rows>li {
+    -ms-flex: 0 0 33.33333333333333%;
+    flex: 0 0 33.33333333333333%;
+    max-width: 33.33333333333333%;
+    }
+
+}
+
+@media (min-width: 1200px){
+    .MovieList.Rows>li, .alpha-list .MovieList>li {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    }
+}
+
+.hide {
+    display: none!important;
+}
+
+
+.bagde-yellow{
+    background: yellow;
+    color: #000;
+    padding: 2px 6px;
+    font-size: 11px !important;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgb(123, 20, 220);
+    border-radius: 15px;
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(123, 20, 220);
+    border-radius: 15px;
+/*     outline: 1px solid slategrey; */
+  }
+
+
+
+/* 
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background: #020615;
+}
+
+body::-webkit-scrollbar-thumb {
+
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+*/
+
+
+/* SECCION NUEVA */
+.home-out-section {
+    position: relative;
+    padding: 123px 0 130px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.home-out-section .section-dtl {
+    margin-bottom: 48px;
+    font-size: 21px;
+    line-height: 1.3;
+    font-weight: 300;
+    padding-right: 100px;
+}
+
+.home-out-section .btn-prime {
+    padding: 14px 18px 14px;
+    width: 280px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 4.8%;
+}
+.btn-prime {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: #48A3C6;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    word-spacing: 2px;
+    border: 1px solid transparent;
+}
+
+.overlay-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+.overlay-bg.gredient-overlay-right {
+    background: -moz-linear-gradient(90deg, #000 40%, transparent 60%);
+    background: -webkit-gradient(linear, 90deg, color-stop(40%, 000), color-stop(60%,transparent)) !important;
+    background: -webkit-linear-gradient(90deg, #000 40%, transparent 60%);
+    background: -o-linear-gradient(90deg, #000 40%, transparent 60%);
+    background: -ms-linear-gradient(90deg, #000 40%, transparent 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+    background: linear-gradient(90deg, #000 40%, transparent 60%);
+}
+
+
+.container-fluid{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    z-index: -1;
+
+}
+
+
+.destacado-overlayColorNetflix {
+    background: -moz-linear-gradient(90deg, #000 40%, transparent 60%);
+    background: -webkit-gradient(linear, 90deg, color-stop(40%, 000), color-stop(60%,transparent)) !important;
+    background: -webkit-linear-gradient(90deg, #000 40%, transparent 60%);
+    background: -o-linear-gradient(90deg, #000 40%, transparent 60%);
+    background: -ms-linear-gradient(90deg, #000 40%, transparent 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+    background: linear-gradient(90deg, crimson 40%, transparent 60%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
+.movie-info .destacado-overlayColorNetflix{
+    z-index: 1;
+}
+
+.destacado-overlay iframe {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+
+.movie-info__container .mv-item-infor .rate {
+    font-size: 12px;
+}
+
+.movie-info__container .mv-item-infor p {
+    margin-bottom: 0;
+}
+
+.movie-info__details .rate i {
+    color: #f5b50a;
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.movie-info__details .rate span {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* ============================= */
+    /*===== Preloader =====*/
+/* ============================= */
+.loading1 .logo {
+    text-align: center;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+  .loading1 .logo img {
+    margin: auto;
+    width: 200px;
+  }
+  .loading1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: crimson;
+    z-index: 9999999;
+  }
+  .loading1-text {
+    position: relative;  
+    text-align: center;
+    top: 40%;
+    transform: translateY(-40%);
+  }
+  .loading1-text span {
+    display: inline-block;
+    margin: 0 5px;
+    color: #FFF;
+    font-size: 18px;
+  }
+  .loading1-text span:nth-child(1) {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-animation: blur-text 1.5s 0s infinite linear alternate;
+    animation: blur-text 1.5s 0s infinite linear alternate;
+  }
+  .loading1-text span:nth-child(2) {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-animation: blur-text 1.5s 0.2s infinite linear alternate;
+    animation: blur-text 1.5s 0.2s infinite linear alternate;
+  }
+  .loading1-text span:nth-child(3) {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-animation: blur-text 1.5s 0.4s infinite linear alternate;
+    animation: blur-text 1.5s 0.4s infinite linear alternate;
+  }
+  .loading1-text span:nth-child(4) {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-animation: blur-text 1.5s 0.6s infinite linear alternate;
+    animation: blur-text 1.5s 0.6s infinite linear alternate;
+  }
+  .loading1-text span:nth-child(5) {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-animation: blur-text 1.5s 0.8s infinite linear alternate;
+    animation: blur-text 1.5s 0.8s infinite linear alternate;
+  }
+  .loading1-text span:nth-child(6) {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-animation: blur-text 1.5s 1s infinite linear alternate;
+    animation: blur-text 1.5s 1s infinite linear alternate;
+  }
+  .loading1-text span:nth-child(7) {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-animation: blur-text 1.5s 1.2s infinite linear alternate;
+    animation: blur-text 1.5s 1.2s infinite linear alternate;
+  }
+  
+  @-webkit-keyframes blur-text {
+    0% {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+      color: #FFF;
+    }
+    100% {
+      -webkit-filter: blur(4px);
+      filter: blur(4px);
+      color: #48A3C6;
+    }
+  }
+  
+  @keyframes blur-text {
+    0% {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+      color: #FFF;
+    }
+    100% {
+      -webkit-filter: blur(4px);
+      filter: blur(4px);
+      color: #48A3C6;
+    }
+  }
+
+
+
+  /* CATEGORIA*/
+
+
+.movie-box-4 {
+    position: relative;
+    
+    border-radius: 4px;
+    background: linear-gradient(to top,rgb(18, 32,80) 0,rgba(52,58,64,0) 100%);
+}
+
+.movie-box-4, .movie-list-1 {
+  
+    overflow: hidden
+}
+
+.movie-box-4 .listing-image {
+    max-height: 300px;
+}
+.movie-box-4 .listing-image {
+    position: relative;
+    max-height: 400px;
+    overflow: hidden;
+    display: block;
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ 
+    opacity: .9;
+    transition: all .3s ease;
+}
+
+
+.top-movies2 .movie-box-4 .listing-content {
+    width: 100%;
+}
+.movie-box-4 .listing-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    
+    transform: translateY(-50%) scale(2.5);
+   
+    filter: blur(10px);
+    transition: all .6s ease;
+    opacity: 0;
+}
+
+
+.movie-box-4 .listing-image:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #343a40;
+    opacity: .6;
+    transition: all .3s ease;
+}
+
+.movie-box-4 .listing-image:after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+   
+    background: linear-gradient(to top,rgb(24, 84, 144) 0,rgba(52,58,64,0) 100%);
+}
+
+
+.main-peliculas .owl-theme .custom-nav {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+  }
+
+
+  .main-peliculas .owl-theme .custom-nav .owl-prev, .main-peliculas .owl-theme .custom-nav .owl-next {
+    position: absolute;
+    height: 100px;
+    color: inherit;
+    background: none;
+    border: none;
+    z-index: 100;
+  }
+  .main-peliculas .owl-theme .custom-nav .owl-prev i, .main-peliculas .owl-theme .custom-nav .owl-next i {
+    font-size: 2.5rem;
+    color: #cecece;
+  }
+  .main-peliculas .owl-theme .custom-nav .owl-prev {
+    left: 0;
+  }
+ .main-peliculas .owl-theme .custom-nav .owl-next {
+    right: 0;
+  }
+
+/*Validar que comience apegado Carousel */ 
+  .owl-stage {padding-left: 0px! important;}
+
+  
+  .item:hover .opacity-none {
+    opacity: 1;
+  }
+ 
+  .item .opacity-none {
+    opacity: 0;
+  }
+ 
+  
+  .item .item-description {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    bottom: -29px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    white-space: pre-wrap;
+    width: 98%;
+    margin: 5px 0;
+    padding-left: 10px;
+    white-space: nowrap;
+ 
+   
+  } 
+
+
+  /* FILL START*/
+
+  .circles {
+    height: 1em;
+    width: 1em;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 100%;
+    box-sizing: content-box;
+    font-size: 200px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  .circles:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: solid 0.1em #cccccc;
+    z-index: -1;
+  }
+  .circles > span {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    font-size: 0.2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 5em;
+    z-index: 9999;
+    color: var(--color);
+    white-space: nowrap;
+    box-sizing: content-box;
+    border-radius: 50%;
+  }
+  .circles > .bar {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-sizing: content-box;
+  }
+  .circles > .bar:before,
+  .circles > .bar:after {
+    content: '';
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    border: solid 0.1em var(--color);
+    border-radius: 50%;
+    box-sizing: content-box;
+    clip: rect(0, 0.5em, 1em, 0);
+  }
+  .circles.big {
+    font-size: 300px;
+  }
+  .circles.medium {
+    font-size: 200px;
+  }
+  .circles.small {
+    font-size: 100px;
+  }
+  .circles.x-small {
+    font-size: 50px;
+  }
+  .circles[data-fill="0"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="0"] > .bar:before {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="0"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="1"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="1"] > .bar:before {
+    transform: rotate(3.6deg);
+  }
+  .circles[data-fill="1"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="2"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="2"] > .bar:before {
+    transform: rotate(7.2deg);
+  }
+  .circles[data-fill="2"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="3"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="3"] > .bar:before {
+    transform: rotate(10.8deg);
+  }
+  .circles[data-fill="3"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="4"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="4"] > .bar:before {
+    transform: rotate(14.4deg);
+  }
+  .circles[data-fill="4"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="5"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="5"] > .bar:before {
+    transform: rotate(18deg);
+  }
+  .circles[data-fill="5"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="6"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="6"] > .bar:before {
+    transform: rotate(21.6deg);
+  }
+  .circles[data-fill="6"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="7"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="7"] > .bar:before {
+    transform: rotate(25.2deg);
+  }
+  .circles[data-fill="7"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="8"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="8"] > .bar:before {
+    transform: rotate(28.8deg);
+  }
+  .circles[data-fill="8"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="9"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="9"] > .bar:before {
+    transform: rotate(32.4deg);
+  }
+  .circles[data-fill="9"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="10"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="10"] > .bar:before {
+    transform: rotate(36deg);
+  }
+  .circles[data-fill="10"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="11"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="11"] > .bar:before {
+    transform: rotate(39.6deg);
+  }
+  .circles[data-fill="11"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="12"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="12"] > .bar:before {
+    transform: rotate(43.2deg);
+  }
+  .circles[data-fill="12"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="13"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="13"] > .bar:before {
+    transform: rotate(46.8deg);
+  }
+  .circles[data-fill="13"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="14"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="14"] > .bar:before {
+    transform: rotate(50.4deg);
+  }
+  .circles[data-fill="14"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="15"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="15"] > .bar:before {
+    transform: rotate(54deg);
+  }
+  .circles[data-fill="15"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="16"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="16"] > .bar:before {
+    transform: rotate(57.6deg);
+  }
+  .circles[data-fill="16"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="17"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="17"] > .bar:before {
+    transform: rotate(61.2deg);
+  }
+  .circles[data-fill="17"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="18"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="18"] > .bar:before {
+    transform: rotate(64.8deg);
+  }
+  .circles[data-fill="18"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="19"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="19"] > .bar:before {
+    transform: rotate(68.4deg);
+  }
+  .circles[data-fill="19"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="20"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="20"] > .bar:before {
+    transform: rotate(72deg);
+  }
+  .circles[data-fill="20"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="21"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="21"] > .bar:before {
+    transform: rotate(75.6deg);
+  }
+  .circles[data-fill="21"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="22"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="22"] > .bar:before {
+    transform: rotate(79.2deg);
+  }
+  .circles[data-fill="22"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="23"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="23"] > .bar:before {
+    transform: rotate(82.8deg);
+  }
+  .circles[data-fill="23"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="24"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="24"] > .bar:before {
+    transform: rotate(86.4deg);
+  }
+  .circles[data-fill="24"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="25"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="25"] > .bar:before {
+    transform: rotate(90deg);
+  }
+  .circles[data-fill="25"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="26"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="26"] > .bar:before {
+    transform: rotate(93.6deg);
+  }
+  .circles[data-fill="26"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="27"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="27"] > .bar:before {
+    transform: rotate(97.2deg);
+  }
+  .circles[data-fill="27"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="28"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="28"] > .bar:before {
+    transform: rotate(100.8deg);
+  }
+  .circles[data-fill="28"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="29"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="29"] > .bar:before {
+    transform: rotate(104.4deg);
+  }
+  .circles[data-fill="29"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="30"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="30"] > .bar:before {
+    transform: rotate(108deg);
+  }
+  .circles[data-fill="30"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="31"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="31"] > .bar:before {
+    transform: rotate(111.6deg);
+  }
+  .circles[data-fill="31"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="32"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="32"] > .bar:before {
+    transform: rotate(115.2deg);
+  }
+  .circles[data-fill="32"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="33"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="33"] > .bar:before {
+    transform: rotate(118.8deg);
+  }
+  .circles[data-fill="33"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="34"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="34"] > .bar:before {
+    transform: rotate(122.4deg);
+  }
+  .circles[data-fill="34"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="35"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="35"] > .bar:before {
+    transform: rotate(126deg);
+  }
+  .circles[data-fill="35"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="36"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="36"] > .bar:before {
+    transform: rotate(129.6deg);
+  }
+  .circles[data-fill="36"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="37"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="37"] > .bar:before {
+    transform: rotate(133.2deg);
+  }
+  .circles[data-fill="37"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="38"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="38"] > .bar:before {
+    transform: rotate(136.8deg);
+  }
+  .circles[data-fill="38"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="39"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="39"] > .bar:before {
+    transform: rotate(140.4deg);
+  }
+  .circles[data-fill="39"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="40"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="40"] > .bar:before {
+    transform: rotate(144deg);
+  }
+  .circles[data-fill="40"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="41"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="41"] > .bar:before {
+    transform: rotate(147.6deg);
+  }
+  .circles[data-fill="41"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="42"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="42"] > .bar:before {
+    transform: rotate(151.2deg);
+  }
+  .circles[data-fill="42"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="43"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="43"] > .bar:before {
+    transform: rotate(154.8deg);
+  }
+  .circles[data-fill="43"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="44"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="44"] > .bar:before {
+    transform: rotate(158.4deg);
+  }
+  .circles[data-fill="44"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="45"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="45"] > .bar:before {
+    transform: rotate(162deg);
+  }
+  .circles[data-fill="45"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="46"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="46"] > .bar:before {
+    transform: rotate(165.6deg);
+  }
+  .circles[data-fill="46"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="47"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="47"] > .bar:before {
+    transform: rotate(169.2deg);
+  }
+  .circles[data-fill="47"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="48"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="48"] > .bar:before {
+    transform: rotate(172.8deg);
+  }
+  .circles[data-fill="48"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="49"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="49"] > .bar:before {
+    transform: rotate(176.4deg);
+  }
+  .circles[data-fill="49"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="50"] > .bar {
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+  .circles[data-fill="50"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="50"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="51"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="51"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="51"] > .bar:after {
+    transform: rotate(0deg);
+  }
+  .circles[data-fill="52"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="52"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="52"] > .bar:after {
+    transform: rotate(187.2deg);
+  }
+  .circles[data-fill="53"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="53"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="53"] > .bar:after {
+    transform: rotate(190.8deg);
+  }
+  .circles[data-fill="54"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="54"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="54"] > .bar:after {
+    transform: rotate(194.4deg);
+  }
+  .circles[data-fill="55"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="55"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="55"] > .bar:after {
+    transform: rotate(198deg);
+  }
+  .circles[data-fill="56"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="56"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="56"] > .bar:after {
+    transform: rotate(201.6deg);
+  }
+  .circles[data-fill="57"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="57"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="57"] > .bar:after {
+    transform: rotate(205.2deg);
+  }
+  .circles[data-fill="58"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="58"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="58"] > .bar:after {
+    transform: rotate(208.8deg);
+  }
+  .circles[data-fill="59"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="59"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="59"] > .bar:after {
+    transform: rotate(212.4deg);
+  }
+  .circles[data-fill="60"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="60"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="60"] > .bar:after {
+    transform: rotate(216deg);
+  }
+  .circles[data-fill="61"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="61"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="61"] > .bar:after {
+    transform: rotate(219.6deg);
+  }
+  .circles[data-fill="62"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="62"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="62"] > .bar:after {
+    transform: rotate(223.2deg);
+  }
+  .circles[data-fill="63"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="63"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="63"] > .bar:after {
+    transform: rotate(226.8deg);
+  }
+  .circles[data-fill="64"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="64"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="64"] > .bar:after {
+    transform: rotate(230.4deg);
+  }
+  .circles[data-fill="65"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="65"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="65"] > .bar:after {
+    transform: rotate(234deg);
+  }
+  .circles[data-fill="66"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="66"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="66"] > .bar:after {
+    transform: rotate(237.6deg);
+  }
+  .circles[data-fill="67"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="67"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="67"] > .bar:after {
+    transform: rotate(241.2deg);
+  }
+  .circles[data-fill="68"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="68"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="68"] > .bar:after {
+    transform: rotate(244.8deg);
+  }
+  .circles[data-fill="69"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="69"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="69"] > .bar:after {
+    transform: rotate(248.4deg);
+  }
+  .circles[data-fill="70"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="70"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="70"] > .bar:after {
+    transform: rotate(252deg);
+  }
+  .circles[data-fill="71"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="71"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="71"] > .bar:after {
+    transform: rotate(255.6deg);
+  }
+  .circles[data-fill="72"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="72"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="72"] > .bar:after {
+    transform: rotate(259.2deg);
+  }
+  .circles[data-fill="73"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="73"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="73"] > .bar:after {
+    transform: rotate(262.8deg);
+  }
+  .circles[data-fill="74"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="74"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="74"] > .bar:after {
+    transform: rotate(266.4deg);
+  }
+  .circles[data-fill="75"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="75"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="75"] > .bar:after {
+    transform: rotate(270deg);
+  }
+  .circles[data-fill="76"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="76"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="76"] > .bar:after {
+    transform: rotate(273.6deg);
+  }
+  .circles[data-fill="77"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="77"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="77"] > .bar:after {
+    transform: rotate(277.2deg);
+  }
+  .circles[data-fill="78"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="78"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="78"] > .bar:after {
+    transform: rotate(280.8deg);
+  }
+  .circles[data-fill="79"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="79"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="79"] > .bar:after {
+    transform: rotate(284.4deg);
+  }
+  .circles[data-fill="80"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="80"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="80"] > .bar:after {
+    transform: rotate(288deg);
+  }
+  .circles[data-fill="81"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="81"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="81"] > .bar:after {
+    transform: rotate(291.6deg);
+  }
+  .circles[data-fill="82"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="82"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="82"] > .bar:after {
+    transform: rotate(295.2deg);
+  }
+  .circles[data-fill="83"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="83"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="83"] > .bar:after {
+    transform: rotate(298.8deg);
+  }
+  .circles[data-fill="84"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="84"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="84"] > .bar:after {
+    transform: rotate(302.4deg);
+  }
+  .circles[data-fill="85"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="85"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="85"] > .bar:after {
+    transform: rotate(306deg);
+  }
+  .circles[data-fill="86"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="86"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="86"] > .bar:after {
+    transform: rotate(309.6deg);
+  }
+  .circles[data-fill="87"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="87"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="87"] > .bar:after {
+    transform: rotate(313.2deg);
+  }
+  .circles[data-fill="88"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="88"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="88"] > .bar:after {
+    transform: rotate(316.8deg);
+  }
+  .circles[data-fill="89"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="89"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="89"] > .bar:after {
+    transform: rotate(320.4deg);
+  }
+  .circles[data-fill="90"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="90"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="90"] > .bar:after {
+    transform: rotate(324deg);
+  }
+  .circles[data-fill="91"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="91"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="91"] > .bar:after {
+    transform: rotate(327.6deg);
+  }
+  .circles[data-fill="92"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="92"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="92"] > .bar:after {
+    transform: rotate(331.2deg);
+  }
+  .circles[data-fill="93"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="93"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="93"] > .bar:after {
+    transform: rotate(334.8deg);
+  }
+  .circles[data-fill="94"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="94"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="94"] > .bar:after {
+    transform: rotate(338.4deg);
+  }
+  .circles[data-fill="95"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="95"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="95"] > .bar:after {
+    transform: rotate(342deg);
+  }
+  .circles[data-fill="96"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="96"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="96"] > .bar:after {
+    transform: rotate(345.6deg);
+  }
+  .circles[data-fill="97"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="97"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="97"] > .bar:after {
+    transform: rotate(349.2deg);
+  }
+  .circles[data-fill="98"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="98"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="98"] > .bar:after {
+    transform: rotate(352.8deg);
+  }
+  .circles[data-fill="99"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="99"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="99"] > .bar:after {
+    transform: rotate(356.4deg);
+  }
+  .circles[data-fill="100"] > .bar {
+    clip: rect(auto, auto, auto);
+  }
+  .circles[data-fill="100"] > .bar:before {
+    transform: rotate(180deg);
+  }
+  .circles[data-fill="100"] > .bar:after {
+    transform: rotate(360deg);
+  /*Fill start*/
+  }
+
+
+
+  /* start rating */
+
+
+  /*---------- star rating ----------*/
+  .star-rating, .back-stars, .front-stars {
+    display: flex;
+  }
+  .star-rating {
+    font-size: 1em;
+    margin: 5px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+  }
+  .back-stars {
+    color: #6f769294;
+    position: relative;
+  }
+  .front-stars {
+    color: #ffbc0b;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+  }
+
+  /* slide flecha */
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&subset=latin-ext');
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  
+ .main-peliculas .slider-two {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .main-peliculas .slider-two .owl-nav, .main-peliculas .slider-two .owl-dots {
+    display: none;
+  }
+  .main-peliculas .slider-two:hover .left-t {
+    visibility: visible;
+    opacity: 1;
+    left: -1px;
+  }
+  .main-peliculas .slider-two:hover .right-t {
+    visibility: visible;
+    opacity: 1;
+    right: -1px;
+  }
+
+  
+  .main-peliculas .slider-two .item.active {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+    border: solid 3px #cc2e38;
+  }
+  .main-peliculas .slider-two .owl-stage {
+    padding: 20px 0;
+    
+  }
+  .main-peliculas .slider-two .left-t {
+    transform: rotate(180deg);
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.25s;
+    width: 42px;
+    height: 78.5%;
+    background: no-repeat rgba(19, 2, 21, 0.85) url(https://i.imgur.com/MGsCixm.png) center center;
+    left: -40px;
+  }
+  .main-peliculas .slider-two .left-t:hover {
+    visibility: visible;
+    opacity: 1;
+    left: -1px;
+  }
+  .main-peliculas .slider-two .left-t.nonl-t {
+    left: -40px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .main-peliculas .slider-two .right-t {
+    background: no-repeat rgba(204, 46, 56, 0.85) url(https://i.imgur.com/MGsCixm.png) center center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 12px;
+    right: -40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.25s;
+    width: 42px;
+    height: 78.5%;
+    background-color: rgba(2, 6, 21, 0.85);
+  }
+  .main-peliculas .slider-two .right-t:hover {
+    visibility: visible;
+    opacity: 1;
+    right: -1px;
+  }
+  .main-peliculas .slider-two .right-t.nonr-t {
+    right: -40px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .main-peliculas .slider-series {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .main-peliculas .slider-series .owl-nav, .main-peliculas .slider-series .owl-dots {
+    display: none;
+  }
+  .main-peliculas .slider-series:hover .left-t {
+    visibility: visible;
+    opacity: 1;
+    left: -1px;
+  }
+  .main-peliculas .slider-series:hover .right-t {
+    visibility: visible;
+    opacity: 1;
+    right: -1px;
+  }
+  
+  .main-peliculas .slider-series .item.active {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+    border: solid 3px #cc2e38;
+  }
+  .main-peliculas .slider-series .owl-stage {
+    padding: 20px 0;
+    
+  }
+  .main-peliculas .slider-series .left-t {
+    transform: rotate(180deg);
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.25s;
+    width: 42px;
+    height: 85.5%;
+    background-color: rgba(20, 2, 21, 0.85) url(https://i.imgur.com/MGsCixm.png) center center;
+    left: -40px;
+  }
+  .main-peliculas .slider-series .left-t:hover {
+    visibility: visible;
+    opacity: 1;
+    left: -1px;
+  }
+  .main-peliculas .slider-series .left-t.nonl-t {
+    left: -40px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .main-peliculas .slider-series .right-t {
+    background: no-repeat rgba(204, 46, 56, 0.85) url(https://i.imgur.com/MGsCixm.png) center center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    right: -40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.25s;
+    width: 42px;
+    height: 85.5%;
+    background-color: rgba(21, 2, 11, 0.85);
+  }
+  .main-peliculas .slider-series .right-t:hover {
+    visibility: visible;
+    opacity: 1;
+    right: -1px;
+  }
+  .main-peliculas .slider-series .right-t.nonr-t {
+    right: -40px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+
+
+  /* ESCALA ITEM */
+
+  .movie-box-1 .stars {
+    position: absolute;
+    top: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.movie-box-1 .movie-details, .movie-box-1 .stars, .movie-box-2 .stars {
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+.movie-box-1 .stars .rating {
+    color: #ffc741;
+}
+
+.movie-box-1, .movie-box-1 .poster {
+    position: relative;
+}
+
+.movie-box-1:hover .stars h5 {
+    padding-top: 0;
+}
+
+.movie-box-1 .stars h5 {
+    display: block;
+    color: rgba(255,255,255,.7);
+    font-weight: 400;
+    padding-top: 20px;
+    transition: all .6s ease;
+}
+
+.movie-box-1:hover .stars {
+    top: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.movie-box-1:hover .poster:before {
+    opacity: .5;
+    z-index: 20;
+}
+
+
+.movie-box-1, .movie-box-1 .poster {
+    position: relative;
+}
+
+
+.movie-box-1 .poster:before {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    z-index: 8;
+    opacity: 0;
+    transition: all .4s ease;
+}
+.movie-box-1 .poster:after, .movie-box-1 .poster:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+}
+
+.movie-box-1 .poster:after {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    z-index: 9;
+}
+
+
+.overlay-gradient .slotholder:after, .overlay-gradient:after, .blog-post .blog-thumb a:before, ul.blog-posts-widget .blog-content .blog-thumb a:before, .celebrity-list-1 .celebrity-image a:before, .celebrity-grid-1 .celebrity-image a:before, .bloglist-post-holder .bloglist-thumb-link .bloglist-post-thumbnail:after, .movie-box-1 .poster:before, .movie-detail-intro2 .movie-poster:before {
+  
+    background: linear-gradient(to top,#007aff8c 0%,#0a0a0a 100%);
+    background: linear-gradient(to bottom,rgb(0, 0, 0) 0,rgb(2, 6, 21) 35%,rgba(22,22,23,0) 60%,rgba(0,0,0,0) 100%);
+}
+
+
+/*ICON SOCIAL MEDIA */
+
+
+/* Wrapper */
+.icon-button {
+	background-color: white;
+	border-radius: 2.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.3rem;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 2.6rem;
+}
+
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 2.6rem;
+	height: 2.6rem;
+	border-radius: 2.6rem;
+	margin: -1.3rem;
+}
+
+/* Icons */
+
+.share-buttons {
+    position: absolute;
+    width: 300px;
+    height: 212px;
+    padding-left: 135px;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -106px;
+  }
+  .share-buttons .share-button {
+    float: left;
+    margin-top: 15px;
+  }
+  .share-buttons .share-button:first-child {
+    margin-top: 0;
+  }
+  .share-buttons .share-button:after {
+    clear: both;
+    display: table;
+  }
+  .share-button {
+    display: block;
+    position: relative;
+    height: 30px;
+  }
+  .share-button:hover {
+    cursor: pointer;
+  }
+  .share-button:hover .share-button-primary {
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, .1);
+  }
+  .share-button:hover .share-button-secondary-content {
+    transform: translate3d(0, 0, 0);
+  }
+  .share-button-primary {
+    position: absolute;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+  }
+  .share-button-icon {
+    display: block;
+    color: #242424;
+    position: absolute;
+    width: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin-top: 1px;
+  }
+  .share-button-secondary {
+    overflow: hidden;
+    margin-left: 15px;
+    height: 30px;
+  }
+  .share-button-secondary-content {
+    font-family: sans-serif;
+    font-size: 0.75em;
+    background: #fff;
+    display: block;
+    height: 30px;
+    text-align: left;
+    padding-left: 24px;
+    padding-right: 18px;
+    line-height: 30px;
+    color: #242424;
+    border-radius: 0 15px 15px 0;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 175ms ease;
+  }
+
+
+.ring-container {
+    position: relative;
+}
+
+.circleload {
+    width: 12px;
+    height: 12px;
+    background-color: crimson;
+    border-radius: 50%;
+    position: absolute;
+    top: 19px;
+    left: 19px;
+}
+
+
+.circleload2 {
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.ringring {
+    border: 3px solid #ffff00;
+    -webkit-border-radius: 30px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+
+.sound {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    right :110px;
+  }
+  .sound--icon {
+    color: #d4d4d4;
+    width: 50%;
+    height: 50%;
+   
+    line-height: 100%;
+    font-size: 25px;
+    display: block;
+    margin: auto;
+  }
+  .sound--wave {
+    position: absolute;
+    border: 4px solid transparent;
+    border-right: 4px solid #d4d4d4;
+    border-radius: 50%;
+    transition: all 200ms;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .sound--wave_one {
+    width: 36%;
+    height: 33%;
+    bottom:74px;
+    left:20px;
+    margin-left:-13px;
+  }
+  .sound--wave_two {
+    width: 20%;
+    height: 22%;
+    bottom:76px;
+    left:10px;
+    margin-left:6px;
+  }
+  .sound-mute .sound--wave {
+    border-radius: 0;
+    width: 20%;
+    height: 20%;
+    border-width: 0 4px 0 0;
+  }
+  .sound-mute .sound--wave_one {
+    transform: rotate(45deg) translate3d(0, -50%, 0);
+  }
+  .sound-mute .sound--wave_two {
+    transform: rotate(-45deg) translate3d(0, 50%, 0);
+  }
+
+  .main-peliculas .title-detail span.more a {
+    -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  -webkit-text-shadow: -200px 0 0px rgba(0, 0, 0, .0);
+  -moz-text-shadow: -200px 0 0px rgba(0, 0, 0, .0);
+  -ms-text-shadow: -200px 0 0px rgba(0, 0, 0, .0);
+  -o-text-shadow: -200px 0 0px rgba(0, 0, 0, .0);
+  text-shadow: -200px 0 0px rgba(0, 0, 0, .0);
+  color: rgba(0, 0, 0, .1);
+  overflow: visible;
+  }
+
+  .main-peliculas:hover span.more a {
+    -webkit-text-shadow: 0px 0 0px rgba(0, 0, 0, 1);
+    -moz-text-shadow: 0px 0 0px rgba(0, 0, 0, 1);
+    -ms-text-shadow: 0px 0 0px rgba(0, 0, 0, 1);
+    -o-text-shadow: 0px 0 0px rgba(0, 0, 0, 1);
+    text-shadow: 0px 0 0px rgba(255, 255, 255);
+
+  }
+
+
+  ::-webkit-input-placeholder{
+      color : white;
+      opacity: 0.5;
+  }
+  
+  
+  
+  .cv3-dots {
+    position: absolute;
+    z-index: 3;
+    left: 0.5rem;
+    top: .5rem;
+    width: 1rem;
+}
+
+.cv3-dots span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 4px;
+    margin-bottom: .5rem;
+    background-color: #1E2747;
+    position: relative;
+    border-radius: 50%;
+}
+
+.cv3-dots span>i, .cv3-dots span>i:before, .cv3-dots span>i:after {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+    position: relative;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.cv3-quality>i, .cv3-quality>i:before, .cv3-quality>i:after {
+    animation: quality 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cv3-dots span>i:before {
+    animation-delay: .33s;
+    animation-duration: 2.2s;
+}
+
+.cv3-dots span>i:after {
+    animation: pulse 2s ease-out;
+    animation-iteration-count: infinite;
+}
+
+.cv3-dots span>i, .cv3-dots span>i:before, .cv3-dots span>i:after {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+    position: relative;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.cv3-quality>i:after {
+    background-color: rgba(107, 237, 9, 1);
+}
+.cv3-dots span>i, .cv3-dots span>i:before, .cv3-dots span>i:after {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+    position: relative;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.cv3-quality>i, .cv3-quality>i:before, .cv3-quality>i:after {
+    animation: quality 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.cv3-dots span:hover:before, .cv3-dots span:hover:after {
+    opacity: 1;
+}
+
+.cv3-dots span:before {
+    content: attr(title);
+    position: absolute;
+    white-space: nowrap;
+    font-size: .65rem;
+    bottom: 14px;
+    left: 50%;
+    width: 76px;
+    margin-left: -18px;
+    background-color: rgba(0,0,0,.7);
+    color: #fff;
+    text-align: center;
+    line-height: 1.2rem;
+    border-radius: 3px;
+}
+
+.cv3-dots span:before, .cv3-dots span:after {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 35;
+}
+
+#chat-online {
+    position: fixed;
+    z-index: 9999;
+    width: 180px;
+    height: 45px;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    left: 43%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: all .4s;
+    border: 1px solid #000;
+}
+
+#chat-online-mobile {
+    position: fixed;
+    z-index: 9999;
+    width: 180px;
+    height: 45px;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    left: 27%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: all .4s;
+    border: 1px solid #000;
+}
+
+
+#chat-online-tablet {
+    position: fixed;
+    z-index: 9999;
+    width: 180px;
+    height: 45px;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    left: 38%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: all .4s;
+    border: 1px solid #000;
+}
+  
+  
+ 
+
+.pagination {
+  display: flex;
+  text-align: center;
+  font-weight: 700;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.pagination a,
+.pagination span {
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0.3rem 0.2rem;
+  line-height: var(--size);
+}
+
+.pagination li.active {
+  background-color: #007aff;
+  -webkit-box-shadow: 0 0 1rem #007aff;
+  color: #fff;
+}
+
+
+
+  
+  
+  
+  
+  
