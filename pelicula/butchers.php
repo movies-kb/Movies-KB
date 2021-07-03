@@ -93,7 +93,7 @@
 
         <ul class="hd-menu">
     <div class="hd-logo">
-        <a href="/" title="Movies KB"><img src="img/kb.png" alt=""></a>
+        <a href="/" title="Movies KB"><img src="img/kb.png" alt="Movies - KB"></a>
         </div>
 
             <li class="li-active"><a title="Ir al Inicio" href="../bienvenida.php"> Inicio</a></li>
@@ -495,8 +495,6 @@
         });
 
 </script>
-        
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138257456-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
